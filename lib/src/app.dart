@@ -1,26 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 
 import 'package:sspian/src/screens/home_screen.dart';
 import 'package:sspian/src/screens/auth_screen.dart';
 
+import 'providers/auth.dart';
+
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        title: 'SSPIAN',
-        theme: ThemeData(
-          primarySwatch: primaryColorSwatch,
-          accentColor: Colors.grey,
-          visualDensity: VisualDensity.adaptivePlatformDensity,
-          textTheme: GoogleFonts.latoTextTheme(
-            Theme.of(context).textTheme,
-          ),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider<Auth>(
+          create: (ctx) => Auth(),
         ),
-        home: HomeScreen(),
-        routes: {
-          //AuthScreen.routeName: (ctx) => AuthScreen()
-        });
+      ],
+      child: Consumer<Auth>(builder: (context, auth, _) {
+        return MaterialApp(
+            title: 'SSPIAN',
+            theme: ThemeData(
+              primarySwatch: primaryColorSwatch,
+              accentColor: Colors.grey,
+              visualDensity: VisualDensity.adaptivePlatformDensity,
+              textTheme: GoogleFonts.latoTextTheme(
+                Theme.of(context).textTheme,
+              ),
+            ),
+            home: auth.isAuth ? HomeScreen() : AuthScreen(),
+            routes: {
+              //AuthScreen.routeName: (ctx) => AuthScreen()
+            });
+      }),
+    );
   }
 }
 

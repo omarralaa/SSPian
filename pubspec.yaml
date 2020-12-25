@@ -30,6 +30,7 @@ dependencies:
   provider: ^4.3.2+3
   google_fonts: ^1.1.1
   flutter_vector_icons: ^0.2.1
+  flutter_secure_storage: ^3.3.5
 
 dev_dependencies:
   flutter_test:

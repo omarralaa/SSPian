@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:sspian/src/providers/auth.dart';
 
 import '../upper_squares_home.dart';
 
@@ -10,7 +12,10 @@ class ProfilePage extends StatelessWidget {
         actions: [
           Padding(
             padding: const EdgeInsets.only(right: 8.0),
-            child: IconButton(icon: Icon(Icons.logout, color: Colors.black), onPressed: () {},),
+            child: IconButton(
+              icon: Icon(Icons.logout, color: Colors.black),
+              onPressed: () => Provider.of<Auth>(context, listen: false).logout(),
+            ),
           ),
         ],
         elevation: 0,

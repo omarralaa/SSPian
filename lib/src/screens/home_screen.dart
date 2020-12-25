@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'package:sspian/src/Widgets/homescrees_widgets/courses_page.dart';
 import 'package:sspian/src/Widgets/homescrees_widgets/profile_page.dart';
 import 'package:sspian/src/Widgets/homescrees_widgets/q&a_page.dart';
@@ -13,12 +14,13 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
-    final List<Widget> _children = [
-      UpdatesPage(),
-      QandAPage(),
-      CoursesPage(),
-      ProfilePage()
-    ];
+  final List<Widget> _children = [
+    UpdatesPage(),
+    QandAPage(),
+    CoursesPage(),
+    ProfilePage()
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,37 +36,32 @@ class _HomeScreenState extends State<HomeScreen> {
         showUnselectedLabels: false,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.update,
-            ),
+            icon: Icon(Icons.update),
             label: "Updates",
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.question_answer,
-            ),
+            icon: Icon(Icons.question_answer),
             label: "Q&A",
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.subscriptions,
-            ),
+            icon: Icon(Icons.subscriptions),
             label: "Courses",
           ),
           BottomNavigationBarItem(
-            icon: Icon(
-              Icons.account_circle,
-            ),
-            label: "Profile",
-          ),
+              icon: Icon(Icons.account_circle), label: "Profile"),
         ],
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () => {},
-        child: Icon(Icons.add),
+        child: Icon(
+          Icons.add,
+          color: Colors.white,
+        ),
         backgroundColor: Theme.of(context).primaryColor,
+        
       ),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.miniCenterDocked,
     );
   }
 
