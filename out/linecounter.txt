@@ -1,0 +1,990 @@
+===============================================================================
+EXTENSION NAME : linecounter
+EXTENSION VERSION : 0.2.7
+-------------------------------------------------------------------------------
+count time : 2020-12-25 15:39:14
+count workspace : e:\Android Studio Apps\SSPian\SSPian
+total files : 958
+total code lines : 693
+total comment lines : 17
+total blank lines : 51
+
+    statistics
+   |      extension|     total code|  total comment|    total blank|percent|
+   -------------------------------------------------------------------------
+   |               |             69|              1|             11|     10|
+   |          .lock|            308|              1|              0|     44|
+   |          .yaml|             65|              6|             12|    9.4|
+   |            .md|             10|              3|              6|    1.4|
+   |             .h|             10|              3|              5|    1.4|
+   |         .plist|             79|              0|              0|     11|
+   |.xcworkspacedata|              7|              0|              0|    1.0|
+   |      .xcconfig|             15|              1|              0|    2.2|
+   |            .sh|             13|              2|              0|    1.9|
+   |             .m|             14|              0|              5|    2.0|
+   |         .swift|             12|              0|              1|    1.7|
+   |        .gradle|              8|              0|              3|    1.2|
+   |    .properties|             11|              0|              0|    1.6|
+   |           .bat|             27|              0|              8|    3.9|
+   |    .xcsettings|              8|              0|              0|    1.2|
+   |    .storyboard|             37|              0|              0|    5.3|
+   -------------------------------------------------------------------------
+.dart_tool\flutter_build\65612cbb9a263578d7f39f8bcb32af62\.filecache, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\65612cbb9a263578d7f39f8bcb32af62\debug_android_application.stamp, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\65612cbb9a263578d7f39f8bcb32af62\flutter_assets.d, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\65612cbb9a263578d7f39f8bcb32af62\gen_localizations.stamp, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\65612cbb9a263578d7f39f8bcb32af62\kernel_snapshot.d, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\65612cbb9a263578d7f39f8bcb32af62\kernel_snapshot.stamp, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\65612cbb9a263578d7f39f8bcb32af62\outputs.json, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\f7d6d1b735cb0e71ecf3de9de0e24db5\.filecache, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\f7d6d1b735cb0e71ecf3de9de0e24db5\debug_android_application.stamp, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\f7d6d1b735cb0e71ecf3de9de0e24db5\flutter_assets.d, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\f7d6d1b735cb0e71ecf3de9de0e24db5\gen_localizations.stamp, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\f7d6d1b735cb0e71ecf3de9de0e24db5\kernel_snapshot.d, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\f7d6d1b735cb0e71ecf3de9de0e24db5\kernel_snapshot.stamp, code is 1, comment is 0, blank is 0.
+.dart_tool\flutter_build\f7d6d1b735cb0e71ecf3de9de0e24db5\outputs.json, code is 1, comment is 0, blank is 0.
+.dart_tool\package_config.json, code is 278, comment is 0, blank is 0.
+.flutter-plugins, code is 5, comment is 0, blank is 0.
+.flutter-plugins-dependencies, code is 1, comment is 0, blank is 0.
+.gitignore, code is 35, comment is 0, blank is 6.
+.metadata, code is 8, comment is 0, blank is 2.
+.packages, code is 46, comment is 44, blank is 0.
+.prettierrc, code is 1, comment is 0, blank is 0.
+.prettierrc, code is 1, comment is 0, blank is 0.
+android\.gitignore, code is 10, comment is 1, blank is 1.
+android\.gitignore, code is 10, comment is 1, blank is 1.
+android\.gradle\5.6.2\executionHistory\executionHistory.lock, it is a binary file.
+android\.gradle\5.6.2\fileChanges\last-build.bin, code is 1, comment is 0, blank is 0.
+android\.gradle\5.6.2\fileContent\fileContent.lock, it is a binary file.
+android\.gradle\5.6.2\fileHashes\fileHashes.bin, it is a binary file.
+android\.gradle\5.6.2\fileHashes\fileHashes.lock, it is a binary file.
+android\.gradle\5.6.2\fileHashes\resourceHashesCache.bin, it is a binary file.
+android\.gradle\5.6.2\gc.properties, code is 0, comment is 0, blank is 0.
+android\.gradle\5.6.2\javaCompile\jarAnalysis.bin, it is a binary file.
+android\.gradle\5.6.2\javaCompile\javaCompile.lock, it is a binary file.
+android\.gradle\5.6.2\javaCompile\taskHistory.bin, it is a binary file.
+android\.gradle\buildOutputCleanup\buildOutputCleanup.lock, it is a binary file.
+android\.gradle\buildOutputCleanup\buildOutputCleanup.lock, it is a binary file.
+android\.gradle\buildOutputCleanup\cache.properties, code is 2, comment is 0, blank is 0.
+android\.gradle\buildOutputCleanup\cache.properties, code is 2, comment is 0, blank is 0.
+android\.gradle\buildOutputCleanup\outputFiles.bin, it is a binary file.
+android\.gradle\buildOutputCleanup\outputFiles.bin, it is a binary file.
+android\.gradle\vcs-1\gc.properties, code is 0, comment is 0, blank is 0.
+android\.gradle\vcs-1\gc.properties, code is 0, comment is 0, blank is 0.
+android\app\build.gradle, code is 49, comment is 3, blank is 11.
+android\app\src\debug\AndroidManifest.xml, code is 4, comment is 3, blank is 0.
+android\app\src\main\AndroidManifest.xml, code is 31, comment is 16, blank is 0.
+android\app\src\main\java\io\flutter\plugins\GeneratedPluginRegistrant.java, code is 10, comment is 5, blank is 3.
+android\app\src\main\kotlin\com\example\sspian\MainActivity.kt, code is 4, comment is 0, blank is 2.
+android\app\src\main\res\drawable\launch_background.xml, code is 4, comment is 7, blank is 1.
+android\app\src\main\res\mipmap-hdpi\ic_launcher.png, it is a binary file.
+android\app\src\main\res\mipmap-mdpi\ic_launcher.png, it is a binary file.
+android\app\src\main\res\mipmap-xhdpi\ic_launcher.png, it is a binary file.
+android\app\src\main\res\mipmap-xxhdpi\ic_launcher.png, it is a binary file.
+android\app\src\main\res\mipmap-xxxhdpi\ic_launcher.png, it is a binary file.
+android\app\src\main\res\values\styles.xml, code is 9, comment is 9, blank is 0.
+android\app\src\profile\AndroidManifest.xml, code is 4, comment is 3, blank is 0.
+android\build.gradle, code is 27, comment is 0, blank is 4.
+android\gradle.properties, code is 4, comment is 0, blank is 0.
+android\gradle.properties, code is 4, comment is 0, blank is 0.
+android\gradle\wrapper\gradle-wrapper.jar, it is a binary file.
+android\gradle\wrapper\gradle-wrapper.properties, code is 6, comment is 1, blank is 0.
+android\gradlew, code is 58, comment is 0, blank is 10.
+android\gradlew, code is 58, comment is 0, blank is 10.
+android\gradlew.bat, code is 27, comment is 0, blank is 8.
+android\gradlew.bat, code is 27, comment is 0, blank is 8.
+android\local.properties, code is 5, comment is 0, blank is 0.
+android\local.properties, code is 5, comment is 0, blank is 0.
+android\settings.gradle, code is 8, comment is 0, blank is 3.
+android\settings.gradle, code is 8, comment is 0, blank is 3.
+assets\google_fonts\Lato-Black.ttf, it is a binary file.
+assets\google_fonts\Lato-BlackItalic.ttf, it is a binary file.
+assets\google_fonts\Lato-Bold.ttf, it is a binary file.
+assets\google_fonts\Lato-BoldItalic.ttf, it is a binary file.
+assets\google_fonts\Lato-Italic.ttf, it is a binary file.
+assets\google_fonts\Lato-Light.ttf, it is a binary file.
+assets\google_fonts\Lato-LightItalic.ttf, it is a binary file.
+assets\google_fonts\Lato-Regular.ttf, it is a binary file.
+assets\google_fonts\Lato-Thin.ttf, it is a binary file.
+assets\google_fonts\Lato-ThinItalic.ttf, it is a binary file.
+assets\images\down_squares.png, it is a binary file.
+assets\images\logo_transparent.png, it is a binary file.
+assets\images\Squares.png, it is a binary file.
+assets\images\Squares@2x.png, it is a binary file.
+assets\images\Squares@3x (2).png, it is a binary file.
+assets\images\Squares@3x.png, it is a binary file.
+assets\images\upper_squares.png, it is a binary file.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\activity\R.java, code is 205, comment is 6, blank is 12.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\arch\core\R.java, code is 4, comment is 6, blank is 2.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\core\R.java, code is 205, comment is 6, blank is 12.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\customview\R.java, code is 165, comment is 6, blank is 12.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\fragment\R.java, code is 205, comment is 6, blank is 12.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\lifecycle\livedata\core\R.java, code is 4, comment is 6, blank is 2.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\lifecycle\livedata\R.java, code is 4, comment is 6, blank is 2.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\lifecycle\R.java, code is 4, comment is 6, blank is 2.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\lifecycle\viewmodel\R.java, code is 4, comment is 6, blank is 2.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\loader\R.java, code is 165, comment is 6, blank is 12.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\savedstate\R.java, code is 4, comment is 6, blank is 2.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\versionedparcelable\R.java, code is 4, comment is 6, blank is 2.
+build\app\generated\not_namespaced_r_class_sources\debug\r\androidx\viewpager\R.java, code is 165, comment is 6, blank is 12.
+build\app\generated\not_namespaced_r_class_sources\debug\r\com\example\sspian\R.java, code is 215, comment is 652, blank is 2.
+build\app\generated\not_namespaced_r_class_sources\debug\r\io\flutter\plugins\pathprovider\R.java, code is 205, comment is 6, blank is 12.
+build\app\generated\source\buildConfig\debug\com\example\sspian\BuildConfig.java, code is 9, comment is 3, blank is 1.
+build\app\intermediates\annotation_processor_list\debug\annotationProcessors.json, code is 1, comment is 0, blank is 0.
+build\app\intermediates\apk_list\debug\mainApkListPersistenceDebug\apk-list.gson, code is 1, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\debug.json, code is 1353, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-af.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-am.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ar.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-as.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-az.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-b+sr+Latn.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-be.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-bg.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-bn.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-bs.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ca.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-cs.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-da.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-de.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-el.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-en-rAU.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-en-rCA.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-en-rGB.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-en-rIN.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-en-rXC.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-es-rUS.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-es.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-et.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-eu.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-fa.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-fi.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-fr-rCA.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-fr.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-gl.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-gu.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-hi.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-hr.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-hu.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-hy.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-in.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-is.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-it.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-iw.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ja.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ka.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-kk.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-km.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-kn.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ko.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ky.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-lo.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-lt.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-lv.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-mk.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ml.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-mn.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-mr.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ms.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-my.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-nb.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ne.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-nl.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-or.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-pa.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-pl.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-pt-rBR.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-pt-rPT.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-pt.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ro.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ru.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-si.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-sk.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-sl.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-sq.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-sr.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-sv.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-sw.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ta.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-te.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-th.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-tl.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-tr.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-uk.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-ur.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-uz.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-v16.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-v21.json, code is 20, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-vi.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-zh-rCN.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-zh-rHK.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-zh-rTW.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values-zu.json, code is 19, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\multi-v2\values.json, code is 47, comment is 0, blank is 0.
+build\app\intermediates\blame\res\debug\single\debug.json, code is 150, comment is 0, blank is 0.
+build\app\intermediates\bundle_manifest\debug\processDebugManifest\bundle-manifest\AndroidManifest.xml, code is 38, comment is 28, blank is 5.
+build\app\intermediates\bundle_manifest\debug\processDebugManifest\bundle-manifest\output.json, code is 1, comment is 0, blank is 0.
+build\app\intermediates\compatible_screen_manifest\debug\createDebugCompatibleScreenManifests\out\output.json, code is 1, comment is 0, blank is 0.
+build\app\intermediates\flutter\debug\.last_build_id, code is 1, comment is 0, blank is 0.
+build\app\intermediates\flutter\debug\flutter_assets\AssetManifest.json, code is 1, comment is 0, blank is 0.
+build\app\intermediates\flutter\debug\flutter_assets\assets\google_fonts\Lato-Black.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\google_fonts\Lato-BlackItalic.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\google_fonts\Lato-Bold.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\google_fonts\Lato-BoldItalic.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\google_fonts\Lato-Italic.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\google_fonts\Lato-Light.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\google_fonts\Lato-LightItalic.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\google_fonts\Lato-Regular.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\google_fonts\Lato-Thin.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\google_fonts\Lato-ThinItalic.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\images\down_squares.png, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\images\logo_transparent.png, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\images\Squares.png, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\images\Squares@2x.png, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\images\Squares@3x.png, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\assets\images\upper_squares.png, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\FontManifest.json, code is 1, comment is 0, blank is 0.
+build\app\intermediates\flutter\debug\flutter_assets\NOTICES, code is 2305, comment is 2324, blank is 507.
+build\app\intermediates\flutter\debug\flutter_assets\packages\cupertino_icons\assets\CupertinoIcons.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\AntDesign.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\Entypo.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\EvilIcons.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\Feather.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\FontAwesome.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\FontAwesome5_Brands.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\FontAwesome5_Regular.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\FontAwesome5_Solid.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\Fontisto.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\Foundation.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\Ionicons.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\MaterialIcons.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\Octicons.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\SimpleLineIcons.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\packages\flutter_vector_icons\fonts\Zocial.ttf, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_assets\vm_snapshot_data, it is a binary file.
+build\app\intermediates\flutter\debug\flutter_build.d, code is 1, comment is 0, blank is 0.
+build\app\intermediates\flutter\debug\libs.jar, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\merge-state, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\+DuCF_OeBJeLsnxreexs3F+7+fo=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\+LN5kq0JnPGheTt_Gcqj97w1sf0=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\2VdIV7msMX4g7yIigsUEtQFW8lU=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\3fvs8hlt4zCwYPX53E+DABkY6SU=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\3qPYIWG3jtAxedbHAUMX28x1wrs=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\41oa1nO6vJGqOE246bEbsYJGpSo=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\4AJeNq6+0LhDXq54y6yBCFdmV60=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\7pdEkuLArDZq2FyJBVfwUvqx7hc=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\9bqrvlOg23EXiH+_u+k1DeMojbI=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\DAis1EsDC0YRwVJxfV40_UCehG4=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\feLcmvsjKWbY6Arbk75G6P7Q_gI=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\FrNZzytS6ycHcJ5o_i8DS8aXBL0=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\gEh6wqRYVztzjf27IDKrOMSN5iE=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\INu1xo8+4RlYBEhnkMx9IWJUAJM=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\Ip8xqmyiCH3pLcAzaN84QRZOmGU=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\IptvAbLkJDROd1rdCF0CpBa3SFc=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\k+0uv2pQbE0R1qwQOm6PNH4wFnU=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\KNf_xAKMvSD4UHn_wLrFcAoGNE8=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\KxKI7Q8kQXWjzmM_yVbFbtSrAt8=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\LrXcNFstpPU1f_sEKLru6wDG+u0=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\lTjDqTYV9vb6wTIPD7PcI952Vac=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\ngqB6OQFD7KZGGsSGjPyt6K81dM=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\nTDr6mRguzt0jdexX46AdILHRUQ=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\pFD61zZt3z5OHdSFcM5wEEjhjVc=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\Qj57qSYRIKi8eBVKJpVkXQ2YG9c=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\qJblCYT0sDAEJ7svyKisfbqCoRw=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\ShNlLH9MpU0CsEvZQ+a6SApZjNI=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\sIJWDdrJZbLZPBiWogWsRkZwS8I=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\ThqBHJ2ahcP7y7n34o1GLe_xZxM=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\Yea9hZMmLP03IVmG1W3GVQ1wgek=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeJavaRes\zip-cache\ZRNi2FUdYjQcA_JtVAOdxXmHCII=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\merge-state, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\+DuCF_OeBJeLsnxreexs3F+7+fo=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\+LN5kq0JnPGheTt_Gcqj97w1sf0=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\2VdIV7msMX4g7yIigsUEtQFW8lU=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\3fvs8hlt4zCwYPX53E+DABkY6SU=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\3qPYIWG3jtAxedbHAUMX28x1wrs=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\41oa1nO6vJGqOE246bEbsYJGpSo=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\4AJeNq6+0LhDXq54y6yBCFdmV60=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\7pdEkuLArDZq2FyJBVfwUvqx7hc=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\9bqrvlOg23EXiH+_u+k1DeMojbI=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\DAis1EsDC0YRwVJxfV40_UCehG4=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\feLcmvsjKWbY6Arbk75G6P7Q_gI=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\FrNZzytS6ycHcJ5o_i8DS8aXBL0=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\gEh6wqRYVztzjf27IDKrOMSN5iE=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\INu1xo8+4RlYBEhnkMx9IWJUAJM=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\Ip8xqmyiCH3pLcAzaN84QRZOmGU=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\IptvAbLkJDROd1rdCF0CpBa3SFc=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\k+0uv2pQbE0R1qwQOm6PNH4wFnU=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\KNf_xAKMvSD4UHn_wLrFcAoGNE8=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\KxKI7Q8kQXWjzmM_yVbFbtSrAt8=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\LrXcNFstpPU1f_sEKLru6wDG+u0=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\lTjDqTYV9vb6wTIPD7PcI952Vac=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\naUU_g7hytweWMQaSZoTodlyoBo=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\ngqB6OQFD7KZGGsSGjPyt6K81dM=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\nTDr6mRguzt0jdexX46AdILHRUQ=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\pFD61zZt3z5OHdSFcM5wEEjhjVc=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\Qj57qSYRIKi8eBVKJpVkXQ2YG9c=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\qJblCYT0sDAEJ7svyKisfbqCoRw=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\ShNlLH9MpU0CsEvZQ+a6SApZjNI=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\sIJWDdrJZbLZPBiWogWsRkZwS8I=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\ThqBHJ2ahcP7y7n34o1GLe_xZxM=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\Yea9hZMmLP03IVmG1W3GVQ1wgek=, it is a binary file.
+build\app\intermediates\incremental\debug-mergeNativeLibs\zip-cache\ZRNi2FUdYjQcA_JtVAOdxXmHCII=, it is a binary file.
+build\app\intermediates\incremental\mergeDebugAssets\merger.xml, code is 2, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugJniLibFolders\merger.xml, code is 2, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\compile-file-map.properties, code is 38, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-af\values-af.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-am\values-am.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ar\values-ar.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-as\values-as.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-az\values-az.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-b+sr+Latn\values-b+sr+Latn.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-be\values-be.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-bg\values-bg.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-bn\values-bn.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-bs\values-bs.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ca\values-ca.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-cs\values-cs.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-da\values-da.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-de\values-de.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-el\values-el.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-en-rAU\values-en-rAU.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-en-rCA\values-en-rCA.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-en-rGB\values-en-rGB.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-en-rIN\values-en-rIN.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-en-rXC\values-en-rXC.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-es-rUS\values-es-rUS.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-es\values-es.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-et\values-et.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-eu\values-eu.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-fa\values-fa.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-fi\values-fi.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-fr-rCA\values-fr-rCA.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-fr\values-fr.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-gl\values-gl.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-gu\values-gu.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-hi\values-hi.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-hr\values-hr.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-hu\values-hu.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-hy\values-hy.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-in\values-in.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-is\values-is.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-it\values-it.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-iw\values-iw.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ja\values-ja.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ka\values-ka.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-kk\values-kk.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-km\values-km.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-kn\values-kn.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ko\values-ko.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ky\values-ky.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-lo\values-lo.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-lt\values-lt.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-lv\values-lv.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-mk\values-mk.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ml\values-ml.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-mn\values-mn.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-mr\values-mr.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ms\values-ms.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-my\values-my.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-nb\values-nb.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ne\values-ne.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-nl\values-nl.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-or\values-or.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-pa\values-pa.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-pl\values-pl.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-pt-rBR\values-pt-rBR.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-pt-rPT\values-pt-rPT.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-pt\values-pt.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ro\values-ro.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ru\values-ru.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-si\values-si.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-sk\values-sk.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-sl\values-sl.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-sq\values-sq.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-sr\values-sr.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-sv\values-sv.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-sw\values-sw.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ta\values-ta.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-te\values-te.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-th\values-th.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-tl\values-tl.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-tr\values-tr.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-uk\values-uk.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-ur\values-ur.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-uz\values-uz.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-v16\values-v16.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-v21\values-v21.xml, code is 19, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-vi\values-vi.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-zh-rCN\values-zh-rCN.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-zh-rHK\values-zh-rHK.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-zh-rTW\values-zh-rTW.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values-zu\values-zu.xml, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\mergeDebugResources\merged.dir\values\values.xml, code is 149, comment is 73, blank is 4.
+build\app\intermediates\incremental\mergeDebugResources\merger.xml, code is 110, comment is 0, blank is 77.
+build\app\intermediates\incremental\mergeDebugShaders\merger.xml, code is 2, comment is 0, blank is 0.
+build\app\intermediates\incremental\packageDebug\tmp\debug\dex-renamer-state.txt, code is 4, comment is 0, blank is 0.
+build\app\intermediates\incremental\packageDebug\tmp\debug\zip-cache\6CkMSAOzm2UkK4Ji2_vNgr8yPZQ=, it is a binary file.
+build\app\intermediates\incremental\packageDebug\tmp\debug\zip-cache\zRZBGZT5vu3X9pqsGGFP2K_odNc=, it is a binary file.
+build\app\intermediates\instant_app_manifest\debug\AndroidManifest.xml, code is 39, comment is 28, blank is 5.
+build\app\intermediates\instant_app_manifest\debug\output.json, code is 1, comment is 0, blank is 0.
+build\app\intermediates\javac\debug\classes\androidx\activity\R$attr.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\activity\R$color.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\activity\R$dimen.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\activity\R$drawable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\activity\R$id.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\activity\R$integer.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\activity\R$layout.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\activity\R$string.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\activity\R$style.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\activity\R$styleable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\activity\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\arch\core\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\core\R$attr.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\core\R$color.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\core\R$dimen.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\core\R$drawable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\core\R$id.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\core\R$integer.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\core\R$layout.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\core\R$string.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\core\R$style.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\core\R$styleable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\core\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\customview\R$attr.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\customview\R$color.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\customview\R$dimen.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\customview\R$drawable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\customview\R$id.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\customview\R$integer.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\customview\R$layout.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\customview\R$string.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\customview\R$style.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\customview\R$styleable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\customview\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\fragment\R$attr.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\fragment\R$color.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\fragment\R$dimen.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\fragment\R$drawable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\fragment\R$id.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\fragment\R$integer.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\fragment\R$layout.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\fragment\R$string.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\fragment\R$style.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\fragment\R$styleable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\fragment\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\lifecycle\livedata\core\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\lifecycle\livedata\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\lifecycle\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\lifecycle\viewmodel\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\loader\R$attr.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\loader\R$color.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\loader\R$dimen.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\loader\R$drawable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\loader\R$id.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\loader\R$integer.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\loader\R$layout.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\loader\R$string.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\loader\R$style.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\loader\R$styleable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\loader\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\savedstate\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\versionedparcelable\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\viewpager\R$attr.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\viewpager\R$color.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\viewpager\R$dimen.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\viewpager\R$drawable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\viewpager\R$id.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\viewpager\R$integer.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\viewpager\R$layout.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\viewpager\R$string.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\viewpager\R$style.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\viewpager\R$styleable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\androidx\viewpager\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\BuildConfig.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\R$attr.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\R$color.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\R$dimen.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\R$drawable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\R$id.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\R$integer.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\R$layout.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\R$mipmap.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\R$string.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\R$style.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\R$styleable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\com\example\sspian\R.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\io\flutter\plugins\GeneratedPluginRegistrant.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\R$attr.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\R$color.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\R$dimen.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\R$drawable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\R$id.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\R$integer.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\R$layout.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\R$string.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\R$style.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\R$styleable.class, it is a binary file.
+build\app\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\R.class, it is a binary file.
+build\app\intermediates\manifest_merge_blame_file\debug\manifest-merger-blame-debug-report.txt, code is 87, comment is 0, blank is 0.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\AssetManifest.json, code is 1, comment is 0, blank is 0.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\google_fonts\Lato-Black.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\google_fonts\Lato-BlackItalic.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\google_fonts\Lato-Bold.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\google_fonts\Lato-BoldItalic.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\google_fonts\Lato-Italic.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\google_fonts\Lato-Light.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\google_fonts\Lato-LightItalic.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\google_fonts\Lato-Regular.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\google_fonts\Lato-Thin.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\google_fonts\Lato-ThinItalic.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\images\down_squares.png, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\images\logo_transparent.png, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\images\Squares.png, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\images\Squares@2x.png, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\images\Squares@3x.png, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\assets\images\upper_squares.png, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\FontManifest.json, code is 1, comment is 0, blank is 0.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\fonts\MaterialIcons-Regular.otf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\NOTICES, code is 2305, comment is 2324, blank is 507.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\cupertino_icons\assets\CupertinoIcons.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\AntDesign.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\Entypo.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\EvilIcons.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\Feather.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\FontAwesome.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\FontAwesome5_Brands.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\FontAwesome5_Regular.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\FontAwesome5_Solid.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\Fontisto.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\Foundation.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\Ionicons.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\MaterialCommunityIcons.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\MaterialIcons.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\Octicons.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\SimpleLineIcons.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\packages\flutter_vector_icons\fonts\Zocial.ttf, it is a binary file.
+build\app\intermediates\merged_assets\debug\out\flutter_assets\vm_snapshot_data, it is a binary file.
+build\app\intermediates\merged_java_res\debug\out.jar, it is a binary file.
+build\app\intermediates\merged_manifests\debug\AndroidManifest.xml, code is 38, comment is 28, blank is 5.
+build\app\intermediates\merged_manifests\debug\output.json, code is 1, comment is 0, blank is 0.
+build\app\intermediates\metadata_feature_manifest\debug\processDebugManifest\metadata-feature\output.json, code is 1, comment is 0, blank is 0.
+build\app\intermediates\processed_res\debug\processDebugResources\out\output.json, code is 1, comment is 0, blank is 0.
+build\app\intermediates\processed_res\debug\processDebugResources\out\resources-debug.ap_, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-hdpi-v4_notification_bg_low_normal.9.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-hdpi-v4_notification_bg_low_pressed.9.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-hdpi-v4_notification_bg_normal.9.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-hdpi-v4_notification_bg_normal_pressed.9.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-hdpi-v4_notify_panel_notification_icon_bg.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-mdpi-v4_notification_bg_low_normal.9.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-mdpi-v4_notification_bg_low_pressed.9.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-mdpi-v4_notification_bg_normal.9.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-mdpi-v4_notify_panel_notification_icon_bg.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-v21_notification_action_background.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-xhdpi-v4_notification_bg_low_normal.9.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-xhdpi-v4_notification_bg_low_pressed.9.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-xhdpi-v4_notification_bg_normal.9.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-xhdpi-v4_notification_bg_normal_pressed.9.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable-xhdpi-v4_notify_panel_notification_icon_bg.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable_launch_background.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable_notification_bg.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable_notification_bg_low.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable_notification_icon_background.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\drawable_notification_tile_bg.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\layout-v16_notification_template_custom_big.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\layout-v21_notification_action.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\layout-v21_notification_action_tombstone.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\layout-v21_notification_template_custom_big.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\layout-v21_notification_template_icon_group.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\layout_custom_dialog.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\layout_notification_action.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\layout_notification_action_tombstone.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\layout_notification_template_icon_group.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\layout_notification_template_part_chronometer.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\layout_notification_template_part_time.xml.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\mipmap-hdpi_ic_launcher.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\mipmap-mdpi_ic_launcher.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\mipmap-xhdpi_ic_launcher.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\mipmap-xxhdpi_ic_launcher.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\mipmap-xxxhdpi_ic_launcher.png.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-af_values-af.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-am_values-am.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ar_values-ar.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-as_values-as.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-az_values-az.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-b+sr+Latn_values-b+sr+Latn.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-be_values-be.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-bg_values-bg.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-bn_values-bn.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-bs_values-bs.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ca_values-ca.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-cs_values-cs.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-da_values-da.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-de_values-de.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-el_values-el.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-en-rAU_values-en-rAU.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-en-rCA_values-en-rCA.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-en-rGB_values-en-rGB.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-en-rIN_values-en-rIN.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-en-rXC_values-en-rXC.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-es-rUS_values-es-rUS.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-es_values-es.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-et_values-et.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-eu_values-eu.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-fa_values-fa.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-fi_values-fi.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-fr-rCA_values-fr-rCA.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-fr_values-fr.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-gl_values-gl.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-gu_values-gu.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-hi_values-hi.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-hr_values-hr.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-hu_values-hu.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-hy_values-hy.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-in_values-in.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-is_values-is.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-it_values-it.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-iw_values-iw.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ja_values-ja.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ka_values-ka.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-kk_values-kk.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-km_values-km.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-kn_values-kn.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ko_values-ko.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ky_values-ky.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-lo_values-lo.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-lt_values-lt.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-lv_values-lv.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-mk_values-mk.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ml_values-ml.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-mn_values-mn.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-mr_values-mr.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ms_values-ms.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-my_values-my.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-nb_values-nb.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ne_values-ne.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-nl_values-nl.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-or_values-or.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-pa_values-pa.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-pl_values-pl.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-pt-rBR_values-pt-rBR.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-pt-rPT_values-pt-rPT.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-pt_values-pt.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ro_values-ro.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ru_values-ru.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-si_values-si.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-sk_values-sk.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-sl_values-sl.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-sq_values-sq.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-sr_values-sr.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-sv_values-sv.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-sw_values-sw.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ta_values-ta.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-te_values-te.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-th_values-th.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-tl_values-tl.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-tr_values-tr.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-uk_values-uk.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-ur_values-ur.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-uz_values-uz.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-v16_values-v16.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-v21_values-v21.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-vi_values-vi.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-zh-rCN_values-zh-rCN.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-zh-rHK_values-zh-rHK.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-zh-rTW_values-zh-rTW.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values-zu_values-zu.arsc.flat, it is a binary file.
+build\app\intermediates\res\merged\debug\values_values.arsc.flat, it is a binary file.
+build\app\intermediates\res\symbol-table-with-package\debug\package-aware-r.txt, code is 143, comment is 0, blank is 0.
+build\app\intermediates\signing_config\debug\out\signing-config.json, code is 1, comment is 0, blank is 0.
+build\app\intermediates\symbols\debug\R.txt, code is 175, comment is 0, blank is 0.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\activity\R$attr.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\activity\R$color.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\activity\R$dimen.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\activity\R$drawable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\activity\R$id.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\activity\R$integer.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\activity\R$layout.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\activity\R$string.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\activity\R$style.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\activity\R$styleable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\activity\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\arch\core\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\core\R$attr.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\core\R$color.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\core\R$dimen.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\core\R$drawable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\core\R$id.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\core\R$integer.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\core\R$layout.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\core\R$string.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\core\R$style.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\core\R$styleable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\core\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\customview\R$attr.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\customview\R$color.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\customview\R$dimen.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\customview\R$drawable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\customview\R$id.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\customview\R$integer.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\customview\R$layout.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\customview\R$string.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\customview\R$style.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\customview\R$styleable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\customview\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\fragment\R$attr.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\fragment\R$color.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\fragment\R$dimen.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\fragment\R$drawable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\fragment\R$id.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\fragment\R$integer.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\fragment\R$layout.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\fragment\R$string.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\fragment\R$style.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\fragment\R$styleable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\fragment\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\lifecycle\livedata\core\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\lifecycle\livedata\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\lifecycle\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\lifecycle\viewmodel\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\loader\R$attr.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\loader\R$color.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\loader\R$dimen.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\loader\R$drawable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\loader\R$id.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\loader\R$integer.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\loader\R$layout.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\loader\R$string.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\loader\R$style.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\loader\R$styleable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\loader\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\savedstate\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\versionedparcelable\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\viewpager\R$attr.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\viewpager\R$color.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\viewpager\R$dimen.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\viewpager\R$drawable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\viewpager\R$id.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\viewpager\R$integer.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\viewpager\R$layout.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\viewpager\R$string.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\viewpager\R$style.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\viewpager\R$styleable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\androidx\viewpager\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\BuildConfig.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\R$attr.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\R$color.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\R$dimen.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\R$drawable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\R$id.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\R$integer.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\R$layout.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\R$mipmap.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\R$string.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\R$style.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\R$styleable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\com\example\sspian\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\io\flutter\plugins\GeneratedPluginRegistrant.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\io\flutter\plugins\pathprovider\R$attr.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\io\flutter\plugins\pathprovider\R$color.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\io\flutter\plugins\pathprovider\R$dimen.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\io\flutter\plugins\pathprovider\R$drawable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\io\flutter\plugins\pathprovider\R$id.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\io\flutter\plugins\pathprovider\R$integer.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\io\flutter\plugins\pathprovider\R$layout.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\io\flutter\plugins\pathprovider\R$string.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\io\flutter\plugins\pathprovider\R$style.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\io\flutter\plugins\pathprovider\R$styleable.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\0\io\flutter\plugins\pathprovider\R.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\1\com\example\sspian\MainActivity.dex, it is a binary file.
+build\app\intermediates\transforms\dexBuilder\debug\__content__.json, code is 1, comment is 0, blank is 0.
+build\app\kotlin\compileDebugKotlin\build-history.bin, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\inputs\source-to-output.tab, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\inputs\source-to-output.tab.keystream, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\inputs\source-to-output.tab.keystream.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\inputs\source-to-output.tab.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\inputs\source-to-output.tab.values.at, code is 1, comment is 0, blank is 0.
+build\app\kotlin\compileDebugKotlin\caches-jvm\inputs\source-to-output.tab_i, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\inputs\source-to-output.tab_i.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\class-fq-name-to-source.tab, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\class-fq-name-to-source.tab.keystream, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\class-fq-name-to-source.tab.keystream.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\class-fq-name-to-source.tab.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\class-fq-name-to-source.tab.values.at, code is 1, comment is 0, blank is 0.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\class-fq-name-to-source.tab_i, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\class-fq-name-to-source.tab_i.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\internal-name-to-source.tab, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\internal-name-to-source.tab.keystream, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\internal-name-to-source.tab.keystream.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\internal-name-to-source.tab.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\internal-name-to-source.tab.values.at, code is 1, comment is 0, blank is 0.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\internal-name-to-source.tab_i, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\internal-name-to-source.tab_i.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\proto.tab, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\proto.tab.keystream, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\proto.tab.keystream.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\proto.tab.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\proto.tab.values.at, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\proto.tab_i, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\proto.tab_i.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\source-to-classes.tab, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\source-to-classes.tab.keystream, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\source-to-classes.tab.keystream.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\source-to-classes.tab.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\source-to-classes.tab.values.at, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\source-to-classes.tab_i, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\source-to-classes.tab_i.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\subtypes.tab, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\subtypes.tab.keystream, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\subtypes.tab.keystream.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\subtypes.tab.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\subtypes.tab.values.at, code is 1, comment is 0, blank is 0.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\subtypes.tab_i, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\subtypes.tab_i.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\supertypes.tab, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\supertypes.tab.keystream, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\supertypes.tab.keystream.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\supertypes.tab.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\supertypes.tab.values.at, code is 1, comment is 0, blank is 0.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\supertypes.tab_i, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\jvm\kotlin\supertypes.tab_i.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\counters.tab, code is 2, comment is 0, blank is 0.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\file-to-id.tab, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\file-to-id.tab.keystream, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\file-to-id.tab.keystream.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\file-to-id.tab.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\file-to-id.tab.values.at, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\file-to-id.tab_i, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\file-to-id.tab_i.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\id-to-file.tab, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\id-to-file.tab.keystream, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\id-to-file.tab.keystream.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\id-to-file.tab.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\id-to-file.tab.values.at, code is 1, comment is 0, blank is 0.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\lookups.tab, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\lookups.tab.keystream, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\lookups.tab.keystream.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\lookups.tab.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\lookups.tab.values.at, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\lookups.tab_i, it is a binary file.
+build\app\kotlin\compileDebugKotlin\caches-jvm\lookups\lookups.tab_i.len, it is a binary file.
+build\app\kotlin\compileDebugKotlin\last-build.bin, it is a binary file.
+build\app\outputs\apk\debug\output.json, code is 1, comment is 0, blank is 0.
+build\app\outputs\flutter-apk\app.apk.sha1, code is 1, comment is 0, blank is 0.
+build\app\outputs\logs\manifest-merger-debug-report.txt, code is 138, comment is 0, blank is 0.
+build\app\tmp\kotlin-classes\debug\com\example\sspian\MainActivity.class, it is a binary file.
+build\app\tmp\kotlin-classes\debug\META-INF\app_debug.kotlin_module, it is a binary file.
+build\app\tmp\packLibsflutterBuildDebug\MANIFEST.MF, code is 1, comment is 0, blank is 1.
+build\e6556116c9e6daf1c1fa215dd8ac0d4f\gen_localizations.stamp, code is 1, comment is 0, blank is 0.
+build\path_provider\.transforms\2de6bb7c0f9df72bc269c9ca1cc8c7e7.bin, code is 1, comment is 0, blank is 0.
+build\path_provider\.transforms\61287f44240adc6f8fd34f458ec47e4b.bin, code is 1, comment is 0, blank is 0.
+build\path_provider\generated\source\buildConfig\debug\io\flutter\plugins\pathprovider\BuildConfig.java, code is 11, comment is 6, blank is 1.
+build\path_provider\intermediates\aapt_friendly_merged_manifests\debug\aapt\AndroidManifest.xml, code is 5, comment is 0, blank is 2.
+build\path_provider\intermediates\aapt_friendly_merged_manifests\debug\aapt\output.json, code is 1, comment is 0, blank is 0.
+build\path_provider\intermediates\annotation_processor_list\debug\annotationProcessors.json, code is 1, comment is 0, blank is 0.
+build\path_provider\intermediates\annotations_typedef_file\debug\extractDebugAnnotations\typedefs.txt, code is 0, comment is 0, blank is 0.
+build\path_provider\intermediates\compile_library_classes\debug\classes.jar, it is a binary file.
+build\path_provider\intermediates\compile_only_not_namespaced_r_class_jar\debug\R.jar, it is a binary file.
+build\path_provider\intermediates\full_jar\debug\createFullJarDebug\full.jar, it is a binary file.
+build\path_provider\intermediates\incremental\debug-mergeJavaRes\merge-state, it is a binary file.
+build\path_provider\intermediates\incremental\debug-mergeNativeLibs\merge-state, it is a binary file.
+build\path_provider\intermediates\incremental\mergeDebugJniLibFolders\merger.xml, code is 2, comment is 0, blank is 0.
+build\path_provider\intermediates\incremental\mergeDebugShaders\merger.xml, code is 2, comment is 0, blank is 0.
+build\path_provider\intermediates\incremental\packageDebugAssets\merger.xml, code is 2, comment is 0, blank is 0.
+build\path_provider\intermediates\incremental\packageDebugResources\compile-file-map.properties, code is 1, comment is 0, blank is 0.
+build\path_provider\intermediates\incremental\packageDebugResources\merger.xml, code is 2, comment is 0, blank is 0.
+build\path_provider\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\BuildConfig.class, it is a binary file.
+build\path_provider\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\PathProviderPlugin$1.class, it is a binary file.
+build\path_provider\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\PathProviderPlugin$UiThreadExecutor.class, it is a binary file.
+build\path_provider\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\PathProviderPlugin.class, it is a binary file.
+build\path_provider\intermediates\javac\debug\classes\io\flutter\plugins\pathprovider\StorageDirectoryMapper.class, it is a binary file.
+build\path_provider\intermediates\library_java_res\debug\res.jar, it is a binary file.
+build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml, code is 5, comment is 0, blank is 2.
+build\path_provider\intermediates\local_only_symbol_list\debug\parseDebugLibraryResources\R-def.txt, code is 2, comment is 0, blank is 0.
+build\path_provider\intermediates\manifest_merge_blame_file\debug\manifest-merger-blame-debug-report.txt, code is 8, comment is 0, blank is 0.
+build\path_provider\intermediates\merged_java_res\debug\out.jar, it is a binary file.
+build\path_provider\intermediates\merged_manifests\debug\output.json, code is 1, comment is 0, blank is 0.
+build\path_provider\intermediates\packaged-classes\debug\classes.jar, it is a binary file.
+build\path_provider\intermediates\res\symbol-table-with-package\debug\package-aware-r.txt, code is 139, comment is 0, blank is 0.
+build\path_provider\intermediates\runtime_library_classes\debug\classes.jar, it is a binary file.
+build\path_provider\intermediates\symbols\debug\R.txt, code is 171, comment is 0, blank is 0.
+build\path_provider\outputs\aar\path_provider-debug.aar, it is a binary file.
+build\path_provider\outputs\logs\manifest-merger-debug-report.txt, code is 19, comment is 0, blank is 0.
+ios\.gitignore, code is 29, comment is 3, blank is 1.
+ios\Flutter\AppFrameworkInfo.plist, code is 26, comment is 0, blank is 0.
+ios\Flutter\AppFrameworkInfo.plist, code is 26, comment is 0, blank is 0.
+ios\Flutter\Debug.xcconfig, code is 1, comment is 0, blank is 0.
+ios\Flutter\Debug.xcconfig, code is 1, comment is 0, blank is 0.
+ios\Flutter\flutter_export_environment.sh, code is 13, comment is 2, blank is 0.
+ios\Flutter\flutter_export_environment.sh, code is 13, comment is 2, blank is 0.
+ios\Flutter\Generated.xcconfig, code is 13, comment is 1, blank is 0.
+ios\Flutter\Generated.xcconfig, code is 13, comment is 1, blank is 0.
+ios\Flutter\Release.xcconfig, code is 1, comment is 0, blank is 0.
+ios\Flutter\Release.xcconfig, code is 1, comment is 0, blank is 0.
+ios\Runner.xcodeproj\project.pbxproj, code is 455, comment is 27, blank is 13.
+ios\Runner.xcodeproj\project.xcworkspace\contents.xcworkspacedata, code is 7, comment is 0, blank is 0.
+ios\Runner.xcodeproj\project.xcworkspace\xcshareddata\IDEWorkspaceChecks.plist, code is 8, comment is 0, blank is 0.
+ios\Runner.xcodeproj\project.xcworkspace\xcshareddata\WorkspaceSettings.xcsettings, code is 8, comment is 0, blank is 0.
+ios\Runner.xcodeproj\xcshareddata\xcschemes\Runner.xcscheme, code is 91, comment is 0, blank is 0.
+ios\Runner.xcworkspace\contents.xcworkspacedata, code is 7, comment is 0, blank is 0.
+ios\Runner.xcworkspace\contents.xcworkspacedata, code is 7, comment is 0, blank is 0.
+ios\Runner.xcworkspace\xcshareddata\IDEWorkspaceChecks.plist, code is 8, comment is 0, blank is 0.
+ios\Runner.xcworkspace\xcshareddata\IDEWorkspaceChecks.plist, code is 8, comment is 0, blank is 0.
+ios\Runner.xcworkspace\xcshareddata\WorkspaceSettings.xcsettings, code is 8, comment is 0, blank is 0.
+ios\Runner.xcworkspace\xcshareddata\WorkspaceSettings.xcsettings, code is 8, comment is 0, blank is 0.
+ios\Runner\AppDelegate.swift, code is 12, comment is 0, blank is 1.
+ios\Runner\AppDelegate.swift, code is 12, comment is 0, blank is 1.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Contents.json, code is 122, comment is 0, blank is 0.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-1024x1024@1x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-20x20@1x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-20x20@2x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-20x20@3x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-29x29@1x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-29x29@2x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-29x29@3x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-40x40@1x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-40x40@2x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-40x40@2x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-40x40@3x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-60x60@2x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-60x60@3x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-76x76@1x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-76x76@2x.png, it is a binary file.
+ios\Runner\Assets.xcassets\AppIcon.appiconset\Icon-App-83.5x83.5@2x.png, it is a binary file.
+ios\Runner\Assets.xcassets\LaunchImage.imageset\Contents.json, code is 23, comment is 0, blank is 0.
+ios\Runner\Assets.xcassets\LaunchImage.imageset\LaunchImage.png, it is a binary file.
+ios\Runner\Assets.xcassets\LaunchImage.imageset\LaunchImage@2x.png, it is a binary file.
+ios\Runner\Assets.xcassets\LaunchImage.imageset\LaunchImage@3x.png, it is a binary file.
+ios\Runner\Assets.xcassets\LaunchImage.imageset\README.md, code is 3, comment is 0, blank is 2.
+ios\Runner\Base.lproj\LaunchScreen.storyboard, code is 37, comment is 0, blank is 0.
+ios\Runner\Base.lproj\LaunchScreen.storyboard, code is 37, comment is 0, blank is 0.
+ios\Runner\Base.lproj\Main.storyboard, code is 26, comment is 0, blank is 0.
+ios\Runner\GeneratedPluginRegistrant.h, code is 9, comment is 3, blank is 5.
+ios\Runner\GeneratedPluginRegistrant.h, code is 9, comment is 3, blank is 5.
+ios\Runner\GeneratedPluginRegistrant.m, code is 14, comment is 0, blank is 5.
+ios\Runner\GeneratedPluginRegistrant.m, code is 14, comment is 0, blank is 5.
+ios\Runner\Info.plist, code is 45, comment is 0, blank is 0.
+ios\Runner\Info.plist, code is 45, comment is 0, blank is 0.
+ios\Runner\Runner-Bridging-Header.h, code is 1, comment is 0, blank is 0.
+ios\Runner\Runner-Bridging-Header.h, code is 1, comment is 0, blank is 0.
+lib\main.dart, code is 5, comment is 0, blank is 2.
+lib\src\app.dart, code is 35, comment is 1, blank is 4.
+lib\src\screens\auth_screen.dart, code is 182, comment is 4, blank is 14.
+lib\src\screens\home_screen.dart, code is 72, comment is 0, blank is 4.
+lib\src\utils\utils.dart, code is 4, comment is 0, blank is 1.
+lib\src\Widgets\down_squares_background_widget.dart, code is 13, comment is 0, blank is 1.
+lib\src\Widgets\homescrees_widgets\courses_page.dart, code is 24, comment is 0, blank is 2.
+lib\src\Widgets\homescrees_widgets\profile_page.dart, code is 20, comment is 0, blank is 2.
+lib\src\Widgets\homescrees_widgets\q&a_page.dart, code is 21, comment is 0, blank is 2.
+lib\src\Widgets\homescrees_widgets\updates_page.dart, code is 21, comment is 0, blank is 1.
+lib\src\Widgets\social_login_footer.dart, code is 47, comment is 0, blank is 1.
+lib\src\Widgets\upper_squares_background_widget.dart, code is 13, comment is 0, blank is 1.
+lib\src\Widgets\upper_squares_home.dart, code is 13, comment is 0, blank is 1.
+pubspec.lock, code is 308, comment is 1, blank is 0.
+pubspec.lock, code is 308, comment is 1, blank is 0.
+pubspec.yaml, code is 65, comment is 6, blank is 12.
+pubspec.yaml, code is 65, comment is 6, blank is 12.
+README.md, code is 10, comment is 3, blank is 6.
+README.md, code is 10, comment is 3, blank is 6.
+test\widget_test.dart, code is 14, comment is 10, blank is 6.
+===============================================================================

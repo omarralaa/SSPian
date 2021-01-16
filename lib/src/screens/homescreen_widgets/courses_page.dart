@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
-import '../upper_squares_home.dart';
-
+import 'package:sspian/src/Widgets/upper_squares_home.dart';
 class CoursesPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

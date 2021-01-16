@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:sspian/src/Widgets/homescrees_widgets/courses_page.dart';
-import 'package:sspian/src/Widgets/homescrees_widgets/profile_page.dart';
-import 'package:sspian/src/Widgets/homescrees_widgets/q&a_page.dart';
-import 'package:sspian/src/Widgets/homescrees_widgets/updates_page.dart';
-
+import 'homescreen_widgets/courses_page.dart';
+import 'homescreen_widgets/profile_page.dart';
+import 'homescreen_widgets/q&a_page.dart';
+import 'homescreen_widgets/updates_page.dart';
 class HomeScreen extends StatefulWidget {
   static const routeName = '/';
 
