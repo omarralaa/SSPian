@@ -1,17 +1,77 @@
+import 'dart:convert';
+
+import 'package:http/http.dart' as http;
+
 import 'package:sspian/src/models/auth_response.dart';
 import 'package:sspian/src/models/http_exception.dart';
+import 'package:sspian/src/utils/service_utils.dart';
 
-class AuthService {
+class AuthService with ServiceUtils {
+  final url = ServiceUtils.baseUrl + '/auth';
+
   Future<AuthResponse> login(String email, String password) async {
-    if (email == 'omar@gmail.com' && password == '123456') {
-      return AuthResponse('TOKEN', '23194167');
-    } else {
-      throw HttpException('Invalid username or password');
+    final loginUrl = url + '/login';
+    final reqBody = json.encode({
+      'email': email,
+      'password': password,
+    });
+
+    final Map<String, String> requestHeaders = {
+      'Content-type': 'application/json',
+      'Accept': 'application/json',
+    };
+
+    try {
+      final response = await http
+          .post(loginUrl, body: reqBody, headers: requestHeaders)
+          .timeout(timeout,
+              onTimeout: () => throw HttpException('Server Timed out'));
+
+      final responseData = json.decode(response.body);
+
+      if (responseData['error'] != null || responseData['success'] == false)
+        throw HttpException(responseData['error']);
+
+      final authResponse = AuthResponse.fromJson(responseData['data']);
+
+      return authResponse;
+    } catch (err) {
+      throw (err);
     }
   }
 
-  Future<AuthResponse> register(
-      String fullName, String email, String password) async {
-    return AuthResponse('TOKEN', '23194167');
+  Future<AuthResponse> register(profile) async {
+    final registerUrl = url + '/register';
+
+    final Map<String, String> requestHeaders = {
+      'Content-type': 'application/json',
+      'Accept': 'application/json',
+    };
+
+    final reqBody = json.encode(profile);
+
+    try {
+      final response = await http
+          .post(
+            registerUrl,
+            body: reqBody,
+            headers: requestHeaders,
+          )
+          .timeout(
+            timeout,
+            onTimeout: () => throw HttpException('Server Timed out'),
+          );
+
+      final responseData = json.decode(response.body);
+
+      if (responseData['error'] != null) {
+        throw HttpException(responseData['error']);
+      }
+
+      final authResponse = AuthResponse.fromJson(responseData['data']);
+      return authResponse;
+    } catch (err) {
+      throw (err);
+    }
   }
 }

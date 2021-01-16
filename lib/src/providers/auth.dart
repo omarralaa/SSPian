@@ -21,8 +21,8 @@ class Auth with ChangeNotifier {
     await _setData(authResponse);
   }
 
-  Future<void> register(String fullName, String email, String password) async {
-    final authResponse = await _authService.register(fullName, email, password);
+  Future<void> register(profile) async {
+    final authResponse = await _authService.register(profile);
     await _setData(authResponse);
   }
 
@@ -32,14 +32,20 @@ class Auth with ChangeNotifier {
     notifyListeners();
   }
 
+  Future<dynamic> tryAutoLogin() async {
+    final jsonAuth = await _flutterSecureStorage.read(key: 'jsonAuth');
+    if (jsonAuth != null) {
+      final authData = json.decode(jsonAuth);
+      _token = authData['token'];
+      print(_token);
+      notifyListeners();
+    }
+  }
+
   Future<void> _setData(AuthResponse authResponse) async {
     _token = authResponse.token;
-    // _expiryDate = authResponse.expiryDate;
-    // _userId = authResponse.userId;
-
-    var jsonAuth = json.encode(authResponse);
+    var jsonAuth = json.encode({'token': _token});
     await _flutterSecureStorage.write(key: 'jsonAuth', value: jsonAuth);
     notifyListeners();
-    //_autoLogout();
   }
 }

@@ -4,6 +4,8 @@ import 'package:provider/provider.dart';
 
 import 'package:sspian/src/screens/home_screen.dart';
 import 'package:sspian/src/screens/auth_screen.dart';
+import 'package:sspian/src/screens/splash_screen.dart';
+import 'package:sspian/src/utils/utils.dart';
 
 import 'providers/auth.dart';
 
@@ -20,14 +22,22 @@ class App extends StatelessWidget {
         return MaterialApp(
             title: 'SSPIAN',
             theme: ThemeData(
-              primarySwatch: primaryColorSwatch,
+              primarySwatch: Utils.primaryColorSwatch,
               accentColor: Colors.grey,
               visualDensity: VisualDensity.adaptivePlatformDensity,
               textTheme: GoogleFonts.latoTextTheme(
                 Theme.of(context).textTheme,
               ),
             ),
-            home: auth.isAuth ? HomeScreen() : AuthScreen(),
+            home: auth.isAuth
+                ? HomeScreen()
+                : FutureBuilder(
+                    future: auth.tryAutoLogin(),
+                    builder: (context, snapshot) {
+                      return snapshot.connectionState == ConnectionState.waiting
+                          ? SplashScreen()
+                          : AuthScreen();
+                    }),
             routes: {
               //AuthScreen.routeName: (ctx) => AuthScreen()
             });
@@ -36,17 +46,3 @@ class App extends StatelessWidget {
   }
 }
 
-MaterialColor primaryColorSwatch = MaterialColor(0xFFDC3030, primaryColorMap);
-
-Map<int, Color> primaryColorMap = {
-  50: Color.fromRGBO(220, 48, 48, .1),
-  100: Color.fromRGBO(220, 48, 48, .2),
-  200: Color.fromRGBO(220, 48, 48, .3),
-  300: Color.fromRGBO(220, 48, 48, .4),
-  400: Color.fromRGBO(220, 48, 48, .5),
-  500: Color.fromRGBO(220, 48, 48, .6),
-  600: Color.fromRGBO(220, 48, 48, .7),
-  700: Color.fromRGBO(220, 48, 48, .8),
-  800: Color.fromRGBO(220, 48, 48, .9),
-  900: Color.fromRGBO(220, 48, 48, 1),
-};

@@ -32,4 +32,12 @@ class Validations {
 
     return null;
   }
+
+  String validateSSPId(val) {
+    if (val.length < 4) {
+      return 'SSP ID Must be at least 4 chars long';
+    }
+
+    return null;
+  }
 }

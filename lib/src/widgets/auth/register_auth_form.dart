@@ -1,29 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:sspian/src/models/profile.dart';
 import 'package:sspian/src/providers/auth.dart';
 
 import 'package:sspian/src/utils/utils.dart';
 import 'package:sspian/src/utils/validations.dart';
-import '../social_login_footer.dart';
 
-class AuthForm extends StatefulWidget {
+class RegisterAuthForm extends StatefulWidget {
   @override
-  _AuthFormState createState() => _AuthFormState();
+  _RegisterAuthFormState createState() => _RegisterAuthFormState();
 }
 
-class _AuthFormState extends State<AuthForm> {
+class _RegisterAuthFormState extends State<RegisterAuthForm> {
   final _formKey = GlobalKey<FormState>();
   final FocusNode _emailFocusNode = FocusNode();
   final FocusNode _passwordFocusNode = FocusNode();
+  final FocusNode _sspIDFocusNode = FocusNode();
 
   final TextEditingController _fullNameController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _sspIDController = TextEditingController();
 
   final Validations _validations = Validations();
 
   bool _isPasswordHidden = true;
-  bool _isLogin = true;
+  bool _isLoading = false;
+
+  static const departments = <String>['CCE', 'CAE', 'GPE', 'OCE', 'EME'];
+  String departmentDropDownValue = departments[0];
 
   @override
   Widget build(BuildContext context) {
@@ -33,16 +39,17 @@ class _AuthFormState extends State<AuthForm> {
           key: _formKey,
           child: Column(
             children: [
-              if (!_isLogin) _buildNameTextField(),
+              _buildNameTextField(),
               _buildEmailTextField(),
               SizedBox(height: Utils.size.height * 0.01),
               _buildPasswordTextField(),
-              _buildForgetPasswordButton(),
-              _buildSignInButton(),
+              _buildSSPIdField(),
+              _buildDepartmentDropDown(),
+              _buildSignUpButton(),
             ],
           ),
         ),
-        _buildSwitchAuthButton(),
+        //_buildSwitchAuthButton(),
       ],
     );
   }
@@ -103,25 +110,32 @@ class _AuthFormState extends State<AuthForm> {
           ),
         ),
         validator: _validations.validatePassword,
+        onFieldSubmitted: (_) => _sspIDFocusNode.requestFocus(),
       ),
     );
   }
 
-  Widget _buildForgetPasswordButton() {
+  Widget _buildSSPIdField() {
     return Container(
-      padding: EdgeInsets.only(top: Utils.size.height * 0.012),
-      alignment: Alignment.centerRight,
-      child: InkWell(
-        onTap: () {},
-        child: Text(
-          'Forgot Password?',
-          style: TextStyle(color: Theme.of(context).primaryColor),
+      child: TextFormField(
+        controller: _sspIDController,
+        decoration: InputDecoration(
+          labelText: 'SSP ID',
+          labelStyle: TextStyle(fontSize: 16),
+          hintText: 'Ex. 1234',
         ),
+        keyboardType: TextInputType.number,
+        inputFormatters: <TextInputFormatter>[
+          FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
+        ],
+        focusNode: _sspIDFocusNode,
+        validator: _validations.validateSSPId,
+        maxLength: 6,
       ),
     );
   }
 
-  Widget _buildSignInButton() {
+  Widget _buildSignUpButton() {
     return Container(
       width: Utils.size.width * 0.59,
       height: Utils.size.height * 0.105,
@@ -130,64 +144,65 @@ class _AuthFormState extends State<AuthForm> {
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         color: Theme.of(context).primaryColor,
         child: Text(
-          _isLogin ? 'SIGN IN' : 'SIGN UP',
+          'SIGN UP',
           style: TextStyle(fontSize: 18, color: Colors.white),
         ),
-        onPressed: _submit,
+        onPressed: _isLoading ? null : _submit,
       ),
     );
   }
 
-  Widget _buildSwitchAuthButton() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.end,
-      children: [
-        Text(
-          _isLogin ? 'Dont have an account?' : 'Already a user?',
-          style: TextStyle(
-            fontSize: 13,
-            color: Theme.of(context).accentColor,
-            fontStyle: FontStyle.italic,
-          ),
+  Widget _buildDepartmentDropDown() {
+    final departmentList = departments.map<DropdownMenuItem<String>>((value) {
+      return DropdownMenuItem<String>(
+        child: Text(value),
+        value: value,
+      );
+    }).toList();
+
+    return Container(
+      padding: EdgeInsets.only(top: Utils.size.height * 0.005),
+      width: double.infinity,
+      height: Utils.size.height * 0.08,
+      child: DropdownButton<String>(
+        isExpanded: true,
+        value: departmentDropDownValue,
+        items: departmentList,
+        elevation: 16,
+        underline: Container(
+          height: 2,
+          color: Theme.of(context).primaryColor,
         ),
-        SizedBox(width: Utils.size.width * 0.01),
-        Container(
-          padding: EdgeInsets.only(top: Utils.size.height * 0.012),
-          alignment: Alignment.centerRight,
-          child: InkWell(
-            onTap: () => setState(() => _isLogin = !_isLogin),
-            child: Text(
-              _isLogin ? 'Register Now' : 'Login Now',
-              style: TextStyle(
-                fontSize: 13,
-                color: Theme.of(context).primaryColor,
-                fontStyle: FontStyle.italic,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
-        ),
-      ],
+        onChanged: (value) {
+          setState(() {
+            departmentDropDownValue = value;
+          });
+        },
+      ),
     );
   }
 
   void _submit() async {
+    FocusScope.of(context).unfocus();
     if (_formKey.currentState.validate()) {
+      setState(() => _isLoading = true);
       final auth = Provider.of<Auth>(context, listen: false);
+
+      final profile = {
+        'firstName': _fullNameController.text.split(' ')[0],
+        'lastName': _fullNameController.text.split(' ')[1],
+        'email': _emailController.text,
+        'password': _passwordController.text,
+        'sspID': _sspIDController.text,
+        'department': departmentDropDownValue,
+      };
+
       try {
-        if (_isLogin) {
-          await auth.login(_emailController.text, _passwordController.text);
-        } else {
-          await auth.register(
-            _fullNameController.text,
-            _emailController.text,
-            _passwordController.text,
-          );
-        }
+        await auth.register(profile);
       } catch (err) {
         showError(err);
       }
+      setState(() => _isLoading = false);
     }
   }
 

@@ -1,19 +1,18 @@
-class AuthResponse {
-  final String token;
-  //final DateTime expiryDate;
-  final String userId;
+import 'package:sspian/src/models/profile.dart';
 
-  //TODO: TO BE REMOVED
-  AuthResponse(this.token, this.userId);
+class AuthResponse {
+  final String _token;
+  final Profile _profile;
+
+  String get token => _token;
+  Profile get profile => _profile;
 
   AuthResponse.fromJson(Map<String, dynamic> map)
-      : token = map['token'],
-        //expiryDate = DateTime.fromMillisecondsSinceEpoch(map['expiryDate']),
-        userId = map['_userId'];
+      : _token = map['token'],
+        _profile = Profile.fromJson(map['profile']);
 
-  Map<String, dynamic> toJson() => {
-        'token': token,
-        //'expiryDate': expiryDate.millisecondsSinceEpoch,
-        'userId': userId,
-      };
+  // Map<String, dynamic> toJson() => {
+  //       'token': token,
+  //       'userId': userId,
+  //     };
 }
