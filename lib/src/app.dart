@@ -35,7 +35,7 @@ class App extends StatelessWidget {
                     future: auth.tryAutoLogin(),
                     builder: (context, snapshot) {
                       return snapshot.connectionState == ConnectionState.waiting
-                          ? SplashScreen()
+                          ? HomeScreen()
                           : AuthScreen();
                     }),
             routes: {

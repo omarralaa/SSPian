@@ -4,12 +4,14 @@ class Profile {
   String _firstName;
   String _lastName;
   String _department;
+  String _sspId;
 
   String get id => _id;
   String get userId => _userId;
   String get firstName => _firstName;
   String get lastName => _lastName;
   String get department => _department;
+  String get sspId => _sspId;
 
   Profile(this._id, this._userId, this._firstName, this._lastName,
       this._department);
@@ -19,6 +21,7 @@ class Profile {
     _userId = json['_userId'];
     _firstName = json['firstName'];
     _lastName = json['lastName'];
-    _department = json['_department'];
+    _department = json['department'];
+    _sspId = json['sspID'];
   }
 }
