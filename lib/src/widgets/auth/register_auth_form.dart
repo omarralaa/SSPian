@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:sspian/src/models/profile.dart';
 import 'package:sspian/src/providers/auth.dart';
+import 'package:sspian/src/providers/profile.dart';
 
 import 'package:sspian/src/utils/utils.dart';
 import 'package:sspian/src/utils/validations.dart';
@@ -186,9 +186,9 @@ class _RegisterAuthFormState extends State<RegisterAuthForm> {
     FocusScope.of(context).unfocus();
     if (_formKey.currentState.validate()) {
       setState(() => _isLoading = true);
-      final auth = Provider.of<Auth>(context, listen: false);
+      final auth = Provider.of<Auth>(context);
 
-      final profile = {
+      final profileBody = {
         'firstName': _fullNameController.text.split(' ')[0],
         'lastName': _fullNameController.text.split(' ')[1],
         'email': _emailController.text,
@@ -198,7 +198,8 @@ class _RegisterAuthFormState extends State<RegisterAuthForm> {
       };
 
       try {
-        await auth.register(profile);
+        await auth.register(profileBody);
+        Provider.of<Profile>(context, listen: false).setProfile(auth.profile);
       } catch (err) {
         showError(err);
       }

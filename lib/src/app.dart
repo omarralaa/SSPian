@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:sspian/src/providers/profile.dart';
 
 import 'package:sspian/src/screens/home_screen.dart';
 import 'package:sspian/src/screens/auth_screen.dart';
@@ -17,9 +18,13 @@ class App extends StatelessWidget {
         ChangeNotifierProvider<Auth>(
           create: (ctx) => Auth(),
         ),
+        ChangeNotifierProvider<Profile>(
+          create: (ctx) => Profile(),
+        ),
       ],
-      child: Consumer<Auth>(builder: (context, auth, _) {
-        return MaterialApp(
+      child: Consumer<Auth>(
+        builder: (context, auth, _) {
+          return MaterialApp(
             title: 'SSPIAN',
             theme: ThemeData(
               primarySwatch: Utils.primaryColorSwatch,
@@ -29,20 +34,29 @@ class App extends StatelessWidget {
                 Theme.of(context).textTheme,
               ),
             ),
-            home: auth.isAuth
-                ? HomeScreen()
-                : FutureBuilder(
-                    future: auth.tryAutoLogin(),
-                    builder: (context, snapshot) {
-                      return snapshot.connectionState == ConnectionState.waiting
-                          ? HomeScreen()
-                          : AuthScreen();
-                    }),
+            home: home(context, auth),
             routes: {
               //AuthScreen.routeName: (ctx) => AuthScreen()
-            });
-      }),
+            },
+          );
+        },
+      ),
     );
   }
 }
 
+home(context, auth) {
+  if (auth.isAuth) {
+    Provider.of<Profile>(context, listen: false).setProfile(auth.profile);
+    return HomeScreen();
+  } else {
+    return FutureBuilder(
+      future: auth.tryAutoLogin(),
+      builder: (context, snapshot) {
+        return snapshot.connectionState == ConnectionState.waiting
+            ? SplashScreen()
+            : AuthScreen();
+      },
+    );
+  }
+}

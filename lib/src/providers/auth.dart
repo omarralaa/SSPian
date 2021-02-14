@@ -9,6 +9,7 @@ import 'package:sspian/src/services/auth_service.dart';
 
 class Auth with ChangeNotifier {
   String _token;
+  Profile _profile;
 
   String get token => _token;
 
@@ -18,18 +19,17 @@ class Auth with ChangeNotifier {
 
   final AuthService _authService = AuthService();
   final _flutterSecureStorage = FlutterSecureStorage();
-  Profile _profile;
 
   Future<void> login(String email, String password) async {
     final authResponse = await _authService.login(email, password);
-    _setProfile(authResponse.profile);
-    await _setData(authResponse.token);
+    _profile = authResponse.profile;
+    await _setData(authResponse);
   }
 
   Future<void> register(profile) async {
     final authResponse = await _authService.register(profile);
-    _setProfile(authResponse.profile);
-    await _setData(authResponse.token);
+    _profile = authResponse.profile;
+    await _setData(authResponse);
   }
 
   Future<void> logout() async {
@@ -43,18 +43,19 @@ class Auth with ChangeNotifier {
     if (jsonAuth != null) {
       final authData = json.decode(jsonAuth);
       _token = authData['token'];
-      print(_token);
+      Profile profile = Profile.fromJson(authData['profile']);
+      _profile = profile;
       notifyListeners();
     }
   }
 
-  Future<void> _setData(String token) async {
-    var jsonAuth = json.encode({'token': _token});
+  Future<void> _setData(AuthResponse authResponse) async {
+    final jsonProfile = authResponse.profile.toJson();
+    final jsonAuth = json.encode({
+      'token': authResponse.token,
+      'profile': jsonProfile
+    });
     await _flutterSecureStorage.write(key: 'jsonAuth', value: jsonAuth);
     notifyListeners();
-  }
-
-  void _setProfile(Profile profile) {
-    _profile = profile;
   }
 }

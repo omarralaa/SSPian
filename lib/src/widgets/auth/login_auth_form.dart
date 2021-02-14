@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sspian/src/providers/auth.dart';
+import 'package:sspian/src/providers/profile.dart';
 
 import 'package:sspian/src/utils/utils.dart';
 import 'package:sspian/src/utils/validations.dart';
@@ -146,10 +147,11 @@ class _LoginAuthFormState extends State<LoginAuthForm> {
       final auth = Provider.of<Auth>(context, listen: false);
       try {
         await auth.login(_emailController.text, _passwordController.text);
+        Provider.of<Profile>(context, listen: false).setProfile(auth.profile);
       } catch (err) {
         showError(err);
+        setState(() => _isLoading = false);
       }
-      setState(() => _isLoading = false);
     }
   }
 

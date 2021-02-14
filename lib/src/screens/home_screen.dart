@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'homescreen_widgets/courses_page.dart';
-import 'homescreen_widgets/profile_page.dart';
-import 'homescreen_widgets/q&a_page.dart';
-import 'homescreen_widgets/updates_page.dart';
+import 'courses_screen.dart';
+import 'profile_screen.dart';
+import 'qanda_page.dart';
+import 'updates_screen.dart';
 class HomeScreen extends StatefulWidget {
   static const routeName = '/';
 
@@ -14,10 +14,10 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   final List<Widget> _children = [
-    UpdatesPage(),
+    UpdatesScreen(),
     QandAPage(),
-    CoursesPage(),
-    ProfilePage()
+    CoursesScreen(),
+    ProfileScreen()
   ];
 
   @override

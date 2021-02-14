@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:sspian/src/Widgets/upper_squares_home.dart';
 import 'package:sspian/src/providers/auth.dart';
 
-class UpdatesPage extends StatelessWidget {
+class UpdatesScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
