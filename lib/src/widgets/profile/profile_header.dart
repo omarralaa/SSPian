@@ -8,7 +8,7 @@ class ProfileHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final profile = Provider.of<Profile>(context).profile;
+    final profile = Provider.of<ProfileProvider>(context).profile;
     return Column(
       children: [
         _buildAvatar(profile),

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:sspian/src/providers/course.dart';
 
 import 'courses_screen.dart';
 import 'profile_screen.dart';
 import 'qanda_page.dart';
 import 'updates_screen.dart';
+
 class HomeScreen extends StatefulWidget {
   static const routeName = '/';
 
@@ -31,36 +34,35 @@ class _HomeScreenState extends State<HomeScreen> {
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Theme.of(context).primaryColor,
         unselectedItemColor: Theme.of(context).accentColor,
-        showSelectedLabels: false,
-        showUnselectedLabels: false,
+        //showSelectedLabels: true,
+        //showUnselectedLabels: true,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.update),
+            icon: Icon(Icons.add_alert_sharp),
             label: "Updates",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.question_answer),
+            icon: Icon(Icons.forum_outlined),
             label: "Q&A",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.subscriptions),
+            icon: Icon(Icons.collections_bookmark),
             label: "Courses",
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.account_circle), label: "Profile"),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () => {},
-        child: Icon(
-          Icons.add,
-          color: Colors.white,
-        ),
-        backgroundColor: Theme.of(context).primaryColor,
-        
-      ),
-      floatingActionButtonLocation:
-          FloatingActionButtonLocation.miniCenterDocked,
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: () => {},
+      //   child: Icon(
+      //     Icons.add,
+      //     color: Colors.white,
+      //   ),
+      //   backgroundColor: Theme.of(context).primaryColor,
+      // ),
+      // floatingActionButtonLocation:
+      //     FloatingActionButtonLocation.miniCenterFloat,
     );
   }
 

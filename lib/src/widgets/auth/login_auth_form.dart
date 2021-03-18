@@ -147,7 +147,7 @@ class _LoginAuthFormState extends State<LoginAuthForm> {
       final auth = Provider.of<Auth>(context, listen: false);
       try {
         await auth.login(_emailController.text, _passwordController.text);
-        Provider.of<Profile>(context, listen: false).setProfile(auth.profile);
+        Provider.of<ProfileProvider>(context, listen: false).setProfile(auth.profile);
       } catch (err) {
         showError(err);
         setState(() => _isLoading = false);

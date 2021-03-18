@@ -199,7 +199,7 @@ class _RegisterAuthFormState extends State<RegisterAuthForm> {
 
       try {
         await auth.register(profileBody);
-        Provider.of<Profile>(context, listen: false).setProfile(auth.profile);
+        Provider.of<ProfileProvider>(context, listen: false).setProfile(auth.profile);
       } catch (err) {
         showError(err);
       }

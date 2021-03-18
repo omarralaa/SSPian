@@ -1,16 +1,15 @@
 
 import 'package:flutter/foundation.dart';
 
-import 'package:sspian/src/models/profile.dart' as p;
+import 'package:sspian/src/models/profile.dart';
 
 
-class Profile extends ChangeNotifier {
-  p.Profile _profile;
+class ProfileProvider extends ChangeNotifier {
+  Profile _profile;
 
-  p.Profile get profile => _profile;
+  Profile get profile => _profile;
 
   void setProfile(profile) {
     _profile = profile;
-    //notifyListeners();
   }
 }

@@ -2,10 +2,12 @@ import 'dart:convert';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:get_it/get_it.dart';
+import 'package:sspian/src/models/AuthServiceModel.dart';
 
 import 'package:sspian/src/models/auth_response.dart';
 import 'package:sspian/src/models/profile.dart';
-import 'package:sspian/src/services/auth_service.dart';
+import 'package:sspian/src/services/api/auth_service.dart';
 
 class Auth with ChangeNotifier {
   String _token;
@@ -43,6 +45,7 @@ class Auth with ChangeNotifier {
     if (jsonAuth != null) {
       final authData = json.decode(jsonAuth);
       _token = authData['token'];
+      GetIt.I<AuthServiceModel>().setToken(_token);
       Profile profile = Profile.fromJson(authData['profile']);
       _profile = profile;
       notifyListeners();
@@ -51,10 +54,9 @@ class Auth with ChangeNotifier {
 
   Future<void> _setData(AuthResponse authResponse) async {
     final jsonProfile = authResponse.profile.toJson();
-    final jsonAuth = json.encode({
-      'token': authResponse.token,
-      'profile': jsonProfile
-    });
+    final jsonAuth =
+        json.encode({'token': authResponse.token, 'profile': jsonProfile});
+    GetIt.I<AuthServiceModel>().setToken(authResponse.token);
     await _flutterSecureStorage.write(key: 'jsonAuth', value: jsonAuth);
     notifyListeners();
   }

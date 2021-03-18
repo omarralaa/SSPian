@@ -31,6 +31,8 @@ dependencies:
   google_fonts: ^1.1.1
   flutter_vector_icons: ^0.2.1
   flutter_secure_storage: ^3.3.5
+  grouped_list: ^3.7.1
+  get_it: ^5.0.0
 
 dev_dependencies:
   flutter_test:

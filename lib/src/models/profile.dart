@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 class Profile {
   String _id;
   String _userId;
@@ -6,6 +8,7 @@ class Profile {
   String _department;
   String _sspId;
   String _photo;
+  HashSet<String> _coursesId;
 
   String get id => _id;
   String get userId => _userId;
@@ -14,6 +17,7 @@ class Profile {
   String get department => _department;
   String get sspId => _sspId;
   String get photo => _photo;
+  HashSet<String> get enrolledCourses => _coursesId;
 
   bool get hasPhoto {
     return photo != 'no-photo.png';
@@ -34,9 +38,21 @@ class Profile {
     _department = json['department'];
     _sspId = json['sspID'];
     _photo = json['photo'];
+    _coursesId = convertCoursesIdsToHashset(json['courses']);
+  }
+
+  HashSet<String> convertCoursesIdsToHashset(coursesIdsJson) {
+    HashSet<String> idSet = HashSet<String>();
+
+    for (var c in coursesIdsJson) {
+      idSet.add(c);
+    }
+
+    return idSet;
   }
 
   Map<String, dynamic> toJson() {
+    final coursesIds = _coursesId.toList();
     return {
       '_id': _id,
       '_userId': _userId,
@@ -45,6 +61,7 @@ class Profile {
       'department': _department,
       'sspID': _sspId,
       'photo': _photo,
+      'courses': coursesIds
     };
   }
 }
