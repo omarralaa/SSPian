@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import 'package:sspian/src/Widgets/upper_squares_home.dart';
 import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/profile.dart';
@@ -54,7 +55,8 @@ class _CoursesScreenState extends State<CoursesScreen> {
   }
 
   Widget _buildBody() {
-    final courses = Provider.of<CourseProvider>(context).courses;
+    final courseProvider = Provider.of<CourseProvider>(context);
+    final courses = courseProvider.courses;
     final enrolledCourseIds =
         Provider.of<ProfileProvider>(context).profile.enrolledCourses;
     return courses == null
@@ -62,12 +64,16 @@ class _CoursesScreenState extends State<CoursesScreen> {
             child: CircularProgressIndicator(
             backgroundColor: Theme.of(context).primaryColor,
           ))
-        : ListView.builder(
-            itemCount: courses.length,
-            itemBuilder: (ctx, i) {
-              return CourseItem(courses[i], enrolledCourseIds);
+        : RefreshIndicator(
+            child: ListView.builder(
+              itemCount: courses.length,
+              itemBuilder: (ctx, i) {
+                return CourseItem(courses[i], enrolledCourseIds);
+              },
+            ),
+            onRefresh: () async {
+              await courseProvider.getCourses({});
             },
-            
           );
   }
 }

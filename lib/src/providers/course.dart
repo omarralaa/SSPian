@@ -19,7 +19,7 @@ class CourseProvider with ChangeNotifier {
 
   void filterCoursesByTerm(String term) {}
 
-  void getCourses(query) async {
+  Future<void> getCourses(query) async {
     final map = Map<String, String>();
     try {
       final crs = await _courseService.getCourses(map);
