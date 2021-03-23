@@ -3,10 +3,12 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/profile.dart';
+import 'package:sspian/src/screens/announcements_screen.dart';
 
-import 'package:sspian/src/screens/home_screen.dart';
+import 'package:sspian/src/screens/home_screen_2.dart';
 import 'package:sspian/src/screens/auth_screen.dart';
 import 'package:sspian/src/screens/splash_screen.dart';
+import 'package:sspian/src/utils/utils.dart';
 
 import 'providers/auth.dart';
 
@@ -30,8 +32,9 @@ class App extends StatelessWidget {
           return MaterialApp(
             title: 'SSPIAN',
             theme: ThemeData(
-              primarySwatch: Colors.blue,
-              accentColor: Colors.grey,
+              primarySwatch: Utils.primaryColorSwatch,
+              accentColor: Color(0xff303842),
+              scaffoldBackgroundColor: Color(0xffeaebed),
               visualDensity: VisualDensity.adaptivePlatformDensity,
               textTheme: GoogleFonts.latoTextTheme(
                 Theme.of(context).textTheme,
@@ -39,7 +42,7 @@ class App extends StatelessWidget {
             ),
             home: home(context, auth),
             routes: {
-              //AuthScreen.routeName: (ctx) => AuthScreen()
+              AnnouncementsScreen.routeName: (ctx) => AnnouncementsScreen(),
             },
           );
         },
@@ -50,7 +53,8 @@ class App extends StatelessWidget {
 
 home(context, auth) {
   if (auth.isAuth) {
-    Provider.of<ProfileProvider>(context, listen: false).setProfile(auth.profile);
+    Provider.of<ProfileProvider>(context, listen: false)
+        .setProfile(auth.profile);
     return HomeScreen();
   } else {
     return FutureBuilder(
