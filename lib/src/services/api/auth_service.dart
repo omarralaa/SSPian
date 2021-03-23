@@ -23,7 +23,7 @@ class AuthService with ServiceUtils {
 
     try {
       final response = await http
-          .post(loginUrl, body: reqBody, headers: requestHeaders)
+          .post(Uri.parse(loginUrl), body: reqBody, headers: requestHeaders)
           .timeout(timeout,
               onTimeout: () => throw HttpException('Server Timed out'));
 
@@ -53,7 +53,7 @@ class AuthService with ServiceUtils {
     try {
       final response = await http
           .post(
-            registerUrl,
+            Uri.parse(registerUrl),
             body: reqBody,
             headers: requestHeaders,
           )

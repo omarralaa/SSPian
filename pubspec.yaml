@@ -28,13 +28,13 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   provider: ^4.3.2+3
-  google_fonts: ^1.1.1
   flutter_vector_icons: ^0.2.1
   flutter_secure_storage: ^3.3.5
   grouped_list: ^3.7.1
   get_it: ^5.0.0
   intl: ^0.17.0
   random_color: ^1.0.5
+  google_fonts: ^2.0.0
 
 dev_dependencies:
   flutter_test:
@@ -67,11 +67,12 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   # fonts:
-  #   - family: Schyler
+  #   - family: Helvetica
   #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  #       - asset: assets/fonts/Helvetica.ttf
+  #       - asset: assets/fonts/Helvetica-Bold.ttf
+  #         weight: 700
+  #       - asset: assets/fonts/Helvetica-Light.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

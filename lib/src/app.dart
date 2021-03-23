@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+
 import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/profile.dart';
 import 'package:sspian/src/screens/announcements_screen.dart';
-
+import 'package:sspian/src/screens/calendar_screen.dart';
 import 'package:sspian/src/screens/home_screen_2.dart';
 import 'package:sspian/src/screens/auth_screen.dart';
 import 'package:sspian/src/screens/splash_screen.dart';
@@ -43,6 +44,7 @@ class App extends StatelessWidget {
             home: home(context, auth),
             routes: {
               AnnouncementsScreen.routeName: (ctx) => AnnouncementsScreen(),
+              CalendarScreen.routeName: (ctx) => CalendarScreen()
             },
           );
         },

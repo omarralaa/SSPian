@@ -17,7 +17,7 @@ class CourseService with ServiceUtils {
     };
 
     String queryString = Uri(queryParameters: query).query;
-    String uri = url + '?' + queryString;
+    final uri = Uri.parse(url + '?' + queryString);
 
     try {
       final response = await http.get(uri, headers: requestHeaders, ).timeout(
