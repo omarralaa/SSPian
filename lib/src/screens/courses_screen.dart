@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sspian/src/Widgets/courses/course_item.dart';
 import 'package:sspian/src/Widgets/upper_squares_home.dart';
 import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/profile.dart';
-import 'package:sspian/src/widgets/courses/course_item.dart';
 
 class CoursesScreen extends StatefulWidget {
   @override
@@ -55,19 +55,22 @@ class _CoursesScreenState extends State<CoursesScreen> {
 
   Widget _buildBody() {
     final courses = Provider.of<CourseProvider>(context).courses;
-    final enrolledCourseIds =
-        Provider.of<ProfileProvider>(context).profile.enrolledCourses;
-    return courses == null
+    final enrolledCourseIds = courses != null ? Provider.of<ProfileProvider>(context)
+        .profile
+        .getEnrolledCourses(courses): null;
+    return enrolledCourseIds == null
         ? Center(
             child: CircularProgressIndicator(
             backgroundColor: Theme.of(context).primaryColor,
           ))
-        : ListView.builder(
-            itemCount: courses.length,
+        : GridView.builder(
+            itemCount: enrolledCourseIds.length + 1,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2),
             itemBuilder: (ctx, i) {
-              return CourseItem(courses[i], enrolledCourseIds);
+              if (i == enrolledCourseIds.length) return Card(child: Icon(Icons.add),);
+              return CourseItem(enrolledCourseIds[i]);
             },
-            
           );
   }
 }

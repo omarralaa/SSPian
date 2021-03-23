@@ -18,8 +18,8 @@ class _HomeScreenState extends State<HomeScreen> {
   int _currentIndex = 0;
   final List<Widget> _children = [
     UpdatesScreen(),
-    QandAPage(),
     CoursesScreen(),
+    QandAPage(),
     ProfileScreen()
   ];
 
@@ -29,25 +29,24 @@ class _HomeScreenState extends State<HomeScreen> {
       body: _children[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
-        selectedFontSize: 0,
         onTap: onTabTapped,
         type: BottomNavigationBarType.fixed,
         selectedItemColor: Theme.of(context).primaryColor,
         unselectedItemColor: Theme.of(context).accentColor,
-        //showSelectedLabels: true,
-        //showUnselectedLabels: true,
+        showSelectedLabels: true,
+        showUnselectedLabels: true,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.add_alert_sharp),
-            label: "Updates",
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.forum_outlined),
-            label: "Q&A",
+            icon: Icon(Icons.dashboard),
+            label: "Dashboard",
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.collections_bookmark),
             label: "Courses",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.message_outlined),
+            label: "Messages",
           ),
           BottomNavigationBarItem(
               icon: Icon(Icons.account_circle), label: "Profile"),
