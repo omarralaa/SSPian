@@ -38,7 +38,7 @@ class Profile {
     _department = json['department'];
     _sspId = json['sspID'];
     _photo = json['photo'];
-    _coursesId = convertCoursesIdsToHashset(json['courses']);
+    _coursesId = convertCoursesIdsToHashset(json['enrollments']);
   }
 
   HashSet<String> convertCoursesIdsToHashset(coursesIdsJson) {
@@ -61,7 +61,7 @@ class Profile {
       'department': _department,
       'sspID': _sspId,
       'photo': _photo,
-      'courses': coursesIds
+      'enrollments': coursesIds
     };
   }
 }
