@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sspian/src/providers/profile.dart';
+import 'package:sspian/src/screens/courses_screen.dart';
 import 'package:sspian/src/utils/general_utils.dart';
 import 'package:sspian/src/utils/utils.dart';
 
@@ -36,10 +37,12 @@ class MainDrawer extends StatelessWidget {
                 ),
           ),
           ListTile(
-            title: Text('Something cool'),
+            title: Text('My courses'),
             onTap: () {
-              // Update the state of the app.
-              // ...
+              Navigator.push(
+    context,
+    MaterialPageRoute(builder: (context) => CoursesScreen()),
+  );
             },
           ),
           ListTile(

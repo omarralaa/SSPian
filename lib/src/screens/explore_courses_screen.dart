@@ -7,12 +7,12 @@ import 'package:sspian/src/Widgets/upper_squares_home.dart';
 import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/profile.dart';
 
-class CoursesScreen extends StatefulWidget {
+class ExploreCourses extends StatefulWidget {
   @override
-  _CoursesScreenState createState() => _CoursesScreenState();
+  _ExploreCoursesScreenState createState() => _ExploreCoursesScreenState();
 }
 
-class _CoursesScreenState extends State<CoursesScreen> {
+class _ExploreCoursesScreenState extends State<ExploreCourses> {
   bool _isFirstLoaded = false;
 
   @override
@@ -32,11 +32,10 @@ class _CoursesScreenState extends State<CoursesScreen> {
         leading: Padding(
           padding: const EdgeInsets.only(top: 20.0, left: 15.0),
           child: GestureDetector(
-              onTap: () {},
-              child: Text(
-                "Select",
-                style: TextStyle(color: Colors.black),
-              )),
+              onTap: () {
+                Navigator.pop(context);
+              },
+              child: Icon(Icons.arrow_back_ios)),
         ),
         actions: [
           Padding(
@@ -57,21 +56,17 @@ class _CoursesScreenState extends State<CoursesScreen> {
 
   Widget _buildBody() {
     final courses = Provider.of<CourseProvider>(context).courses;
-    final enrolledCourseIds = courses != null ? Provider.of<ProfileProvider>(context)
-        .profile
-        .getEnrolledCourses(courses): null;
-    return enrolledCourseIds == null
+    return courses == null
         ? Center(
             child: CircularProgressIndicator(
             backgroundColor: Theme.of(context).primaryColor,
           ))
         : GridView.builder(
-            itemCount: enrolledCourseIds.length + 1,
+            itemCount: courses.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2),
             itemBuilder: (ctx, i) {
-              if (i == enrolledCourseIds.length) return AddCourseButton();
-              return CourseItem(enrolledCourseIds[i]);
+              return CourseItem(courses[i]);
             },
           );
   }
