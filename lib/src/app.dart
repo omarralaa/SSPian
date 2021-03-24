@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:sspian/src/providers/announcement.dart';
 
 import 'package:sspian/src/providers/course.dart';
+import 'package:sspian/src/providers/deadline.dart';
 import 'package:sspian/src/providers/profile.dart';
 import 'package:sspian/src/screens/announcements_screen.dart';
 import 'package:sspian/src/screens/calendar_screen.dart';
@@ -26,6 +28,12 @@ class App extends StatelessWidget {
         ),
         ChangeNotifierProvider<CourseProvider>(
           create: (ctx) => CourseProvider(),
+        ),
+        ChangeNotifierProvider<AnnouncementProvider>(
+          create: (ctx) => AnnouncementProvider(),
+        ),
+        ChangeNotifierProvider<DeadlineProvider>(
+          create: (ctx) => DeadlineProvider(),
         ),
       ],
       child: Consumer<Auth>(

@@ -8,7 +8,7 @@ class FilterCard extends StatefulWidget {
 }
 
 class _FilterCardState extends State<FilterCard> {
-  int _selectedIndex = 2;
+  int _selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -57,15 +57,15 @@ class _FilterCardState extends State<FilterCard> {
                 fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
               ),
             ),
-            if (_selectedIndex == index)
-              Container(
-                height: Utils.size.height * 0.0025,
-                width: Utils.size.width * 0.02,
-                color: Theme.of(context).accentColor,
-                margin: EdgeInsets.only(
-                  top: Utils.size.height * 0.005,
-                ),
-              )
+            // if (_selectedIndex == index)
+            //   Container(
+            //     height: Utils.size.height * 0.0025,
+            //     width: Utils.size.width * 0.02,
+            //     color: Theme.of(context).accentColor,
+            //     margin: EdgeInsets.only(
+            //       top: Utils.size.height * 0.005,
+            //     ),
+            //   )
           ],
         ),
       ),

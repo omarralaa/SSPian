@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:sspian/src/providers/announcement.dart';
+import 'package:sspian/src/providers/deadline.dart';
+
 import 'package:sspian/src/widgets/anounncements/announcements_list.dart';
 import 'package:sspian/src/widgets/anounncements/anounncements_page_header.dart';
 import 'package:sspian/src/widgets/anounncements/filter_card.dart';
