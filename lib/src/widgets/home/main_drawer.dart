@@ -37,7 +37,7 @@ class MainDrawer extends StatelessWidget {
                 ),
           ),
           ListTile(
-            title: Text('My courses'),
+            title: Text('My Courses'),
             onTap: () {
               Navigator.push(
     context,
