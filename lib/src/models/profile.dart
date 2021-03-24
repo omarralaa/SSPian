@@ -1,5 +1,7 @@
 import 'dart:collection';
 
+import 'course.dart';
+
 class Profile {
   String _id;
   String _userId;
@@ -18,6 +20,9 @@ class Profile {
   String get sspId => _sspId;
   String get photo => _photo;
   HashSet<String> get enrolledCourses => _coursesId;
+  List<Course> getEnrolledCourses(List<Course> courses) {
+    return courses.where((element) => _coursesId.contains(element.id)).toList();
+  }
 
   bool get hasPhoto {
     return photo != 'no-photo.png';
