@@ -8,7 +8,7 @@ import 'package:sspian/src/providers/deadline.dart';
 import 'package:sspian/src/providers/profile.dart';
 import 'package:sspian/src/screens/announcements_screen.dart';
 import 'package:sspian/src/screens/calendar_screen.dart';
-import 'package:sspian/src/screens/home_screen_2.dart';
+import 'package:sspian/src/screens/home_screen.dart';
 import 'package:sspian/src/screens/auth_screen.dart';
 import 'package:sspian/src/screens/splash_screen.dart';
 import 'package:sspian/src/utils/utils.dart';

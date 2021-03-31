@@ -1,6 +1,7 @@
 import 'dart:convert';
 
 import 'package:http/http.dart' as http;
+import 'package:sspian/src/models/AnounncementResponse.dart';
 import 'package:sspian/src/models/announcement.dart';
 
 import 'package:sspian/src/models/http_exception.dart';
@@ -9,7 +10,8 @@ import 'package:sspian/src/utils/service_utils.dart';
 class AnnouncementService with ServiceUtils {
   final url = ServiceUtils.baseUrl + '/announcements';
 
-  Future<List<Announcement>> getAnnouncements(Map<String, String> query) async {
+  Future<AnnouncementResponse> getAnnouncements(
+      Map<String, String> query) async {
     final Map<String, String> requestHeaders = {
       'Content-type': 'application/json',
       'Accept': 'application/json',
@@ -33,15 +35,10 @@ class AnnouncementService with ServiceUtils {
       if (responseData['error'] != null || responseData['success'] == false)
         throw HttpException(responseData['error']);
 
-      final data = responseData['data'];
-      List<Announcement> announcements = [];
+      AnnouncementResponse announcementResponse = AnnouncementResponse.fromJson(
+          responseData['data'], responseData['pagination']);
 
-      for (var ac in data) {
-        Announcement an = Announcement.fromJson(ac);
-        announcements.add(an);
-      }
-
-      return announcements;
+      return announcementResponse;
     } catch (err) {
       throw (err);
     }

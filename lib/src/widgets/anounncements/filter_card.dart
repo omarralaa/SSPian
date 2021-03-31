@@ -2,13 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:sspian/src/utils/utils.dart';
 
-class FilterCard extends StatefulWidget {
-  @override
-  _FilterCardState createState() => _FilterCardState();
-}
+class FilterCard extends StatelessWidget {
+  final Function selectIndex;
+  final int selectedIndex;
 
-class _FilterCardState extends State<FilterCard> {
-  int _selectedIndex = 0;
+  FilterCard(this.selectedIndex, this.selectIndex);
 
   @override
   Widget build(BuildContext context) {
@@ -29,19 +27,23 @@ class _FilterCardState extends State<FilterCard> {
           right: Utils.size.width * 0.08,
           //top: Utils.size.height * 0.02,
         ),
-        child: ListView(scrollDirection: Axis.horizontal, children: [
-          _buildFilterButton(0, 'All Items', () {}),
-          _buildFilterButton(1, 'Announcements', () {}),
-          _buildFilterButton(2, 'Assignments', () {}),
-          _buildFilterButton(3, 'Projects', () {}),
-          _buildFilterButton(4, 'Quizzes', () {}),
-        ]),
+        child: ListView(
+          scrollDirection: Axis.horizontal,
+          children: [
+            _buildFilterButton(0, 'All Announcements', () {}),
+            _buildFilterButton(1, 'Deadlines', () {}),
+            _buildFilterButton(2, 'Assignments', () {}),
+            _buildFilterButton(3, 'Projects', () {}),
+            _buildFilterButton(4, 'Quizzes', () {}),
+            _buildFilterButton(5, 'Updates', () {}),
+          ],
+        ),
       ),
     );
   }
 
   Widget _buildFilterButton(int index, String text, Function handler) {
-    bool isSelected = index == _selectedIndex;
+    bool isSelected = index == selectedIndex;
     return TextButton(
       child: Container(
         padding: EdgeInsets.symmetric(horizontal: Utils.size.width * 0.016),
@@ -51,9 +53,7 @@ class _FilterCardState extends State<FilterCard> {
             Text(
               text,
               style: TextStyle(
-                color: isSelected
-                    ? Theme.of(context).accentColor
-                    : Color(0xff75747c),
+                color: isSelected ? Color(0xff303842) : Color(0xff75747c),
                 fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
               ),
             ),
@@ -70,7 +70,7 @@ class _FilterCardState extends State<FilterCard> {
         ),
       ),
       onPressed: () {
-        setState(() => _selectedIndex = index);
+        selectIndex(index);
         handler();
       },
     );
