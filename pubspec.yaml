@@ -33,7 +33,7 @@ dependencies:
   grouped_list: ^3.7.1
   get_it: ^5.0.0
   intl: ^0.17.0
-  random_color: ^1.0.5
+  random_color: ^1.0.5 
   google_fonts: ^2.0.0
   pagination_view: ^1.0.4+2
 

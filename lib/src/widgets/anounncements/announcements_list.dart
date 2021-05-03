@@ -57,32 +57,10 @@ class _AnnouncementsListState extends State<AnnouncementsList> {
   }
 
   void _setList() {
-    List<Announcement> list = [];
     final announcemntsProvider = Provider.of<AnnouncementProvider>(context);
 
-    switch (widget.index) {
-      case 0:
-        list = announcemntsProvider.allAnnoumcements;
-        break;
-      case 1:
-        list = announcemntsProvider.deadlines;
-        break;
-      case 2:
-        list = announcemntsProvider.assignments;
-        break;
-      case 3:
-        list = announcemntsProvider.projects;
-        break;
-      case 4:
-        list = announcemntsProvider.quizes;
-        break;
-      case 5:
-        list = announcemntsProvider.announcements;
-        break;
-    }
-
     setState(() {
-      announcementList = list;
+      announcementList = announcemntsProvider.getSpecificAnnouncement(widget.index);
     });
 
     //return announcemntsProvider.announcements;

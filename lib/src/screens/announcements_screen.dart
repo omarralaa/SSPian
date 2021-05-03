@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-
-import 'package:sspian/src/widgets/anounncements/announcements_list.dart';
+import 'package:sspian/src/Widgets/anounncements/announcements_list.dart';
+import 'package:sspian/src/Widgets/anounncements/filter_card.dart';
 import 'package:sspian/src/widgets/anounncements/anounncements_page_header.dart';
-import 'package:sspian/src/widgets/anounncements/filter_card.dart';
+
 
 class AnnouncementsScreen extends StatefulWidget {
   static const String routeName = '/announcements';

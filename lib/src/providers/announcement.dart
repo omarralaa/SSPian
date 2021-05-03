@@ -58,6 +58,30 @@ class AnnouncementProvider with ChangeNotifier {
     return all;
   }
 
+  List<Announcement> getSpecificAnnouncement(int index) {
+    switch (index) {
+      case 0:
+        return allAnnoumcements;
+        break;
+      case 1:
+        return deadlines;
+        break;
+      case 2:
+        return assignments;
+        break;
+      case 3:
+        return projects;
+        break;
+      case 4:
+        return quizes;
+        break;
+      case 5:
+        return announcements;
+        break;
+    }
+    notifyListeners();
+  }
+
   Future<void> getAnnouncements() async {
     try {
       final announcementResponse = await _announcementService.getAnnouncements(
