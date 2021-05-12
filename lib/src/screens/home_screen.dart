@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:sspian/src/providers/announcement.dart';
+import 'package:sspian/src/providers/auth.dart';
 import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/deadline.dart';
 import 'package:sspian/src/widgets/home/home_menu_grid.dart';
@@ -51,10 +52,19 @@ class _HomeScreenState extends State<HomeScreen> {
             HomePageHeader(_scaffoldKey),
             HomeUpperContainer(),
             HomeMenuGrid(),
+            _buildTempLogout(),
           ],
         ),
         SummaryCard(),
       ],
     );
+  }
+
+  Widget _buildTempLogout() {
+    return ElevatedButton(
+        onPressed: () {
+          Provider.of<Auth>(context, listen: false).logout();
+        },
+        child: Text('Logout'));
   }
 }

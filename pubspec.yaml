@@ -36,6 +36,7 @@ dependencies:
   random_color: ^1.0.5 
   google_fonts: ^2.0.0
   pagination_view: ^1.0.4+2
+  dio: ^4.0.0
 
 dev_dependencies:
   flutter_test:

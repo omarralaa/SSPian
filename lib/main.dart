@@ -4,6 +4,7 @@ import 'package:flutter/rendering.dart';
 
 import 'package:sspian/src/app.dart';
 import 'package:sspian/src/models/AuthServiceModel.dart';
+import 'package:sspian/src/services/api/sspian_api_service.dart';
 
 void main() {
   runApp(App());
@@ -13,4 +14,6 @@ void main() {
 
 void setup() {
   GetIt.I.registerSingleton<AuthServiceModel>(AuthServiceModel());
+  GetIt.I.registerSingleton<SSPApiService>(SSPApiService());
+  GetIt.I.get<SSPApiService>().init();
 }

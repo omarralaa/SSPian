@@ -2,15 +2,17 @@ import 'package:flutter/foundation.dart';
 import 'package:sspian/src/models/announcement.dart';
 import 'package:sspian/src/models/deadline.dart';
 import 'package:sspian/src/models/deadline_type.dart';
-import 'package:sspian/src/services/api/announcement_service.dart';
-import 'package:sspian/src/services/api/deadline_service.dart';
+import 'package:sspian/src/repositories/announcement/announcement_repository.dart';
+import 'package:sspian/src/repositories/announcement/announcement_repository_interface.dart';
+import 'package:sspian/src/repositories/deadline/deadline_repository.dart';
+import 'package:sspian/src/repositories/deadline/deadline_repository_interface.dart';
 
 class AnnouncementProvider with ChangeNotifier {
   List<Announcement> _announcements = [];
   List<Deadline> _deadlines = [];
 
-  AnnouncementService _announcementService = AnnouncementService();
-  DeadlineService _deadlineService = DeadlineService();
+  IAnnouncmentRepository _announcementRepository = AnnouncementRepository();
+  IDeadlineRepository _deadlineRepository = DeadlineRepository();
 
   int page = 1;
   final int limit = 10;
@@ -84,8 +86,9 @@ class AnnouncementProvider with ChangeNotifier {
 
   Future<void> getAnnouncements() async {
     try {
-      final announcementResponse = await _announcementService.getAnnouncements(
-          {'sort': '-createdAt', 'limit': limit.toString(), 'page': '1'});
+      final announcementResponse = await _announcementRepository
+          .getAnnouncements(
+              {'sort': '-createdAt', 'limit': limit.toString(), 'page': '1'});
 
       _announcements = announcementResponse.announcements;
       page = announcementResponse.currentPage;
@@ -98,7 +101,7 @@ class AnnouncementProvider with ChangeNotifier {
 
   Future<void> getDeadlines() async {
     try {
-      _deadlines = await _deadlineService.getDeadlines(
+      _deadlines = await _deadlineRepository.getDeadlines(
           {'sort': '-createdAt', 'limit': limit.toString(), 'page': '1'});
       notifyListeners();
     } catch (err) {
@@ -110,7 +113,7 @@ class AnnouncementProvider with ChangeNotifier {
     //page = (offset / limit).round() + 1;
     page++;
 
-    final nextAnnouncementsResponse = await _announcementService
+    final nextAnnouncementsResponse = await _announcementRepository
         .getAnnouncements({
       'sort': '-createdAt',
       'limit': limit.toString(),

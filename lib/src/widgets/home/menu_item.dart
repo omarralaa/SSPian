@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:random_color/random_color.dart';
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 
 class MenuItem extends StatelessWidget {
   final String title;
@@ -16,8 +16,8 @@ class MenuItem extends StatelessWidget {
     return InkWell(
       child: Container(
         margin: EdgeInsets.symmetric(
-            horizontal: Utils.size.width * 0.02,
-            vertical: Utils.size.height * 0.01),
+            horizontal: Constants.width * 0.02,
+            vertical: Constants.height * 0.01),
         decoration: BoxDecoration(
           color: color,
           borderRadius: BorderRadius.all(
@@ -25,7 +25,7 @@ class MenuItem extends StatelessWidget {
           ),
         ),
         child: Container(
-          margin: EdgeInsets.only(bottom: Utils.size.height * 0.005),
+          margin: EdgeInsets.only(bottom: Constants.height * 0.005),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(
@@ -45,11 +45,11 @@ class MenuItem extends StatelessWidget {
       children: [
         Icon(
           iconData,
-          size: Utils.size.width * 0.09,
+          size: Constants.width * 0.09,
           color: color,
         ),
         SizedBox(
-          height: Utils.size.height * 0.01,
+          height: Constants.height * 0.01,
         ),
         Text(
           title,

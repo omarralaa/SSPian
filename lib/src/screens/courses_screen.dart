@@ -6,6 +6,7 @@ import 'package:sspian/src/Widgets/courses/course_item.dart';
 import 'package:sspian/src/Widgets/upper_squares_home.dart';
 import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/profile.dart';
+import 'package:sspian/src/utils/constants.dart';
 
 class CoursesScreen extends StatefulWidget {
   @override
@@ -32,11 +33,12 @@ class _CoursesScreenState extends State<CoursesScreen> {
         leading: Padding(
           padding: const EdgeInsets.only(top: 20.0, left: 15.0),
           child: GestureDetector(
-              onTap: () {},
-              child: Text(
-                "Select",
-                style: TextStyle(color: Colors.black),
-              )),
+            onTap: () {},
+            child: Text(
+              "Select",
+              style: TextStyle(color: Colors.black),
+            ),
+          ),
         ),
         actions: [
           Padding(
@@ -57,22 +59,27 @@ class _CoursesScreenState extends State<CoursesScreen> {
 
   Widget _buildBody() {
     final courses = Provider.of<CourseProvider>(context).courses;
-    final enrolledCourseIds = courses != null ? Provider.of<ProfileProvider>(context)
-        .profile
-        .getEnrolledCourses(courses): null;
+    final enrolledCourseIds = courses != null
+        ? Provider.of<ProfileProvider>(context)
+            .profile
+            .getEnrolledCourses(courses)
+        : null;
     return enrolledCourseIds == null
         ? Center(
             child: CircularProgressIndicator(
             backgroundColor: Theme.of(context).primaryColor,
           ))
-        : GridView.builder(
-            itemCount: enrolledCourseIds.length + 1,
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2),
-            itemBuilder: (ctx, i) {
-              if (i == enrolledCourseIds.length) return AddCourseButton();
-              return CourseItem(enrolledCourseIds[i]);
-            },
+        : Container(
+            padding: EdgeInsets.symmetric(horizontal: Constants.width * 0.02),
+            child: GridView.builder(
+              itemCount: enrolledCourseIds.length + 1,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2),
+              itemBuilder: (ctx, i) {
+                if (i == enrolledCourseIds.length) return AddCourseButton();
+                return CourseItem(enrolledCourseIds[i]);
+              },
+            ),
           );
   }
 }

@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 
 class SummaryCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: Utils.size.height * 0.1,
-      right: -Utils.size.width * 0.05,
+      top: Constants.height * 0.1,
+      right: -Constants.width * 0.05,
       child: Container(
-        height: Utils.size.height * 0.1,
-        width: Utils.size.width,
+        height: Constants.height * 0.1,
+        width: Constants.width,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(
@@ -18,7 +18,7 @@ class SummaryCard extends StatelessWidget {
           ),
         ),
         padding: EdgeInsets.only(
-          right: Utils.size.width * 0.08,
+          right: Constants.width * 0.08,
           //top: Utils.size.height * 0.02,
         ),
         child: Row(
@@ -49,7 +49,7 @@ class SummaryCard extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: Utils.size.height * 0.005,
+          height: Constants.height * 0.005,
         ),
         Text(
           text.toUpperCase(),

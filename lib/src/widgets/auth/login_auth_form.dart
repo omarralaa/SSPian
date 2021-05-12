@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:sspian/src/providers/auth.dart';
 import 'package:sspian/src/providers/profile.dart';
 
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 import 'package:sspian/src/utils/validations.dart';
 import '../social_login_footer.dart';
 
@@ -37,7 +37,7 @@ class _LoginAuthFormState extends State<LoginAuthForm> {
             children: [
               if (!_isLogin) _buildNameTextField(),
               _buildEmailTextField(),
-              SizedBox(height: Utils.size.height * 0.01),
+              SizedBox(height: Constants.height * 0.01),
               _buildPasswordTextField(),
               _buildForgetPasswordButton(),
               _buildSignInButton(),
@@ -91,7 +91,7 @@ class _LoginAuthFormState extends State<LoginAuthForm> {
           labelText: 'Password',
           labelStyle: TextStyle(fontSize: 16),
           contentPadding:
-              EdgeInsets.symmetric(vertical: Utils.size.height * 0.012),
+              EdgeInsets.symmetric(vertical: Constants.height * 0.012),
           suffixIcon: InkWell(
             child: Icon(
               _isPasswordHidden
@@ -111,7 +111,7 @@ class _LoginAuthFormState extends State<LoginAuthForm> {
 
   Widget _buildForgetPasswordButton() {
     return Container(
-      padding: EdgeInsets.only(top: Utils.size.height * 0.012),
+      padding: EdgeInsets.only(top: Constants.height * 0.012),
       alignment: Alignment.centerRight,
       child: InkWell(
         onTap: () {},
@@ -125,9 +125,9 @@ class _LoginAuthFormState extends State<LoginAuthForm> {
 
   Widget _buildSignInButton() {
     return Container(
-      width: Utils.size.width * 0.59,
-      height: Utils.size.height * 0.105,
-      padding: EdgeInsets.only(top: Utils.size.height * 0.05),
+      width: Constants.width * 0.59,
+      height: Constants.height * 0.105,
+      padding: EdgeInsets.only(top: Constants.height * 0.05),
       child: RaisedButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         color: Theme.of(context).primaryColor,
@@ -147,7 +147,8 @@ class _LoginAuthFormState extends State<LoginAuthForm> {
       final auth = Provider.of<Auth>(context, listen: false);
       try {
         await auth.login(_emailController.text, _passwordController.text);
-        Provider.of<ProfileProvider>(context, listen: false).setProfile(auth.profile);
+        Provider.of<ProfileProvider>(context, listen: false)
+            .setProfile(auth.profile);
       } catch (err) {
         showError(err);
         setState(() => _isLoading = false);
@@ -156,6 +157,6 @@ class _LoginAuthFormState extends State<LoginAuthForm> {
   }
 
   void showError(err) {
-    Scaffold.of(context).showSnackBar(SnackBar(content: Text(err.toString())));
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(err.toString())));
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 import 'package:sspian/src/widgets/auth/login_auth_form.dart';
 import 'package:sspian/src/widgets/auth/register_auth_form.dart';
 import 'package:sspian/src/widgets/down_squares_background_widget.dart';
@@ -19,7 +19,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
   @override
   Widget build(BuildContext context) {
-    Utils.size = MediaQuery.of(context).size;
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: SingleChildScrollView(
@@ -34,13 +34,13 @@ class _AuthScreenState extends State<AuthScreen> {
 
   Widget _buildBody() {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: Utils.size.width * 0.12),
+      padding: EdgeInsets.symmetric(horizontal: Constants.width * 0.12),
       child: Column(
         children: [
           _buildLogo(),
           _isLogin ? LoginAuthForm() : RegisterAuthForm(),
           _buildSwitchAuthButton(),
-          SizedBox(height: Utils.size.height * 0.045),
+          SizedBox(height: Constants.height * 0.045),
           SocialLoginFooter(),
         ],
       ),
@@ -50,7 +50,7 @@ class _AuthScreenState extends State<AuthScreen> {
   Widget _buildLogo() {
     return Container(
       alignment: Alignment.center,
-      padding: EdgeInsets.only(top: Utils.size.height * .05),
+      padding: EdgeInsets.only(top: Constants.height * .05),
       child: Image.asset('assets/images/logo_transparent.png'),
     );
   }
@@ -68,9 +68,9 @@ class _AuthScreenState extends State<AuthScreen> {
             fontStyle: FontStyle.italic,
           ),
         ),
-        SizedBox(width: Utils.size.width * 0.01),
+        SizedBox(width: Constants.width * 0.01),
         Container(
-          padding: EdgeInsets.only(top: Utils.size.height * 0.012),
+          padding: EdgeInsets.only(top: Constants.height * 0.012),
           alignment: Alignment.centerRight,
           child: InkWell(
             onTap: () => setState(() => _isLogin = !_isLogin),

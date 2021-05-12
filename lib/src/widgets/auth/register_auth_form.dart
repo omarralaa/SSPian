@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:sspian/src/providers/auth.dart';
 import 'package:sspian/src/providers/profile.dart';
 
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 import 'package:sspian/src/utils/validations.dart';
 
 class RegisterAuthForm extends StatefulWidget {
@@ -41,7 +41,7 @@ class _RegisterAuthFormState extends State<RegisterAuthForm> {
             children: [
               _buildNameTextField(),
               _buildEmailTextField(),
-              SizedBox(height: Utils.size.height * 0.01),
+              SizedBox(height: Constants.height * 0.01),
               _buildPasswordTextField(),
               _buildSSPIdField(),
               _buildDepartmentDropDown(),
@@ -96,7 +96,7 @@ class _RegisterAuthFormState extends State<RegisterAuthForm> {
           labelText: 'Password',
           labelStyle: TextStyle(fontSize: 16),
           contentPadding:
-              EdgeInsets.symmetric(vertical: Utils.size.height * 0.012),
+              EdgeInsets.symmetric(vertical: Constants.height * 0.012),
           suffixIcon: InkWell(
             child: Icon(
               _isPasswordHidden
@@ -137,9 +137,9 @@ class _RegisterAuthFormState extends State<RegisterAuthForm> {
 
   Widget _buildSignUpButton() {
     return Container(
-      width: Utils.size.width * 0.59,
-      height: Utils.size.height * 0.105,
-      padding: EdgeInsets.only(top: Utils.size.height * 0.05),
+      width: Constants.width * 0.59,
+      height: Constants.height * 0.105,
+      padding: EdgeInsets.only(top: Constants.height * 0.05),
       child: RaisedButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         color: Theme.of(context).primaryColor,
@@ -161,9 +161,9 @@ class _RegisterAuthFormState extends State<RegisterAuthForm> {
     }).toList();
 
     return Container(
-      padding: EdgeInsets.only(top: Utils.size.height * 0.005),
+      padding: EdgeInsets.only(top: Constants.height * 0.005),
       width: double.infinity,
-      height: Utils.size.height * 0.08,
+      height: Constants.height * 0.08,
       child: DropdownButton<String>(
         isExpanded: true,
         value: departmentDropDownValue,
@@ -186,7 +186,7 @@ class _RegisterAuthFormState extends State<RegisterAuthForm> {
     FocusScope.of(context).unfocus();
     if (_formKey.currentState.validate()) {
       setState(() => _isLoading = true);
-      final auth = Provider.of<Auth>(context);
+      final auth = Provider.of<Auth>(context, listen: false);
 
       final profileBody = {
         'firstName': _fullNameController.text.split(' ')[0],
@@ -199,7 +199,8 @@ class _RegisterAuthFormState extends State<RegisterAuthForm> {
 
       try {
         await auth.register(profileBody);
-        Provider.of<ProfileProvider>(context, listen: false).setProfile(auth.profile);
+        Provider.of<ProfileProvider>(context, listen: false)
+            .setProfile(auth.profile);
       } catch (err) {
         showError(err);
       }
@@ -208,6 +209,6 @@ class _RegisterAuthFormState extends State<RegisterAuthForm> {
   }
 
   void showError(err) {
-    Scaffold.of(context).showSnackBar(SnackBar(content: Text(err.toString())));
+    ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(err.toString())));
   }
 }

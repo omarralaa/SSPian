@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 import 'package:sspian/src/widgets/home/deadline_item.dart';
 
 class HomeUpperContainer extends StatelessWidget {
@@ -9,17 +9,17 @@ class HomeUpperContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Color(0xfff7f7f7),
-      height: Utils.size.height * 0.32,
+      height: Constants.height * 0.32,
       width: double.infinity,
       padding: EdgeInsets.only(
-        top: Utils.size.height * 0.075,
-        left: Utils.size.width * 0.05,
+        top: Constants.height * 0.075,
+        left: Constants.width * 0.05,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           _buildTodayLabel(),
-          SizedBox(height: Utils.size.height * 0.01),
+          SizedBox(height: Constants.height * 0.01),
           _buildDateLabel(context),
           _buildDeadlinesList(),
         ],
@@ -79,8 +79,8 @@ class HomeUpperContainer extends StatelessWidget {
     return dummy_deadlines == null
         ? SizedBox()
         : Container(
-            padding: EdgeInsets.only(top: Utils.size.height * 0.03),
-            height: Utils.size.height * 0.16,
+            padding: EdgeInsets.only(top: Constants.height * 0.03),
+            height: Constants.height * 0.16,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemCount: 2,

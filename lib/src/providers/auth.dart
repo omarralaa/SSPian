@@ -7,7 +7,9 @@ import 'package:sspian/src/models/AuthServiceModel.dart';
 
 import 'package:sspian/src/models/auth_response.dart';
 import 'package:sspian/src/models/profile.dart';
-import 'package:sspian/src/services/api/auth_service.dart';
+import 'package:sspian/src/repositories/auth/auth_repository.dart';
+import 'package:sspian/src/repositories/auth/auth_repository_interface.dart';
+import 'package:sspian/src/services/api/sspian_api_service.dart';
 
 class Auth with ChangeNotifier {
   String _token;
@@ -19,17 +21,18 @@ class Auth with ChangeNotifier {
 
   Profile get profile => _profile;
 
-  final AuthService _authService = AuthService();
+  final IAuthRepository _authRepository = AuthRepository();
   final _flutterSecureStorage = FlutterSecureStorage();
 
   Future<void> login(String email, String password) async {
-    final authResponse = await _authService.login(email, password);
+    final authResponse =
+        await _authRepository.loginWithEmailAndPassword(email, password);
     _profile = authResponse.profile;
     await _setData(authResponse);
   }
 
   Future<void> register(profile) async {
-    final authResponse = await _authService.register(profile);
+    final authResponse = await _authRepository.register(profile);
     _profile = authResponse.profile;
     await _setData(authResponse);
   }
@@ -46,6 +49,7 @@ class Auth with ChangeNotifier {
       final authData = json.decode(jsonAuth);
       _token = authData['token'];
       GetIt.I<AuthServiceModel>().setToken(_token);
+      GetIt.I<SSPApiService>().setToken(_token);
       Profile profile = Profile.fromJson(authData['profile']);
       _profile = profile;
       notifyListeners();
@@ -57,6 +61,8 @@ class Auth with ChangeNotifier {
     final jsonAuth =
         json.encode({'token': authResponse.token, 'profile': jsonProfile});
     GetIt.I<AuthServiceModel>().setToken(authResponse.token);
+    GetIt.I<SSPApiService>().setToken(authResponse.token);
+
     await _flutterSecureStorage.write(key: 'jsonAuth', value: jsonAuth);
     notifyListeners();
   }

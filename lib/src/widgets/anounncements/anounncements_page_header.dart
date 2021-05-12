@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 
 class AnnouncementsPageHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: Utils.size.height * 0.02),
-      height: Utils.size.height * .15,
+      padding: EdgeInsets.only(top: Constants.height * 0.02),
+      height: Constants.height * .12,
       width: double.infinity,
       color: Theme.of(context).accentColor,
       child: Column(
@@ -28,7 +28,7 @@ class AnnouncementsPageHeader extends StatelessWidget {
           ),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        SizedBox(width: Utils.size.width * 0.24),
+        SizedBox(width: Constants.width * 0.24),
         Text(
           'Announcements',
           style: TextStyle(

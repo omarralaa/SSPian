@@ -2,8 +2,9 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
-class Utils {
-  static Size size;
+class Constants {
+  static double width;
+  static double height;
 
   static MaterialColor primaryColorSwatch =
       MaterialColor(0xFFd63925, primaryColorMap);

@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:sspian/src/providers/profile.dart';
 import 'package:sspian/src/screens/courses_screen.dart';
 import 'package:sspian/src/utils/general_utils.dart';
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 
 class MainDrawer extends StatelessWidget {
   final GeneralUtils generalUtils = GeneralUtils();
@@ -19,12 +19,12 @@ class MainDrawer extends StatelessWidget {
               //crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 CircleAvatar(
-                  radius: Utils.size.width * 0.1,
+                  radius: Constants.width * 0.1,
                   backgroundImage: NetworkImage(profile.photoUrl),
                   backgroundColor: Colors.transparent,
                 ),
                 SizedBox(
-                  height: Utils.size.height * 0.02,
+                  height: Constants.height * 0.02,
                 ),
                 Text(
                   'Good ${generalUtils.getPeriodOfDay()}, ${profile.firstName}',
@@ -40,9 +40,9 @@ class MainDrawer extends StatelessWidget {
             title: Text('My Courses'),
             onTap: () {
               Navigator.push(
-    context,
-    MaterialPageRoute(builder: (context) => CoursesScreen()),
-  );
+                context,
+                MaterialPageRoute(builder: (context) => CoursesScreen()),
+              );
             },
           ),
           ListTile(

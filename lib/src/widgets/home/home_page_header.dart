@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 
 class HomePageHeader extends StatelessWidget {
   final GlobalKey<ScaffoldState> _scaffoledKey;
@@ -10,8 +10,8 @@ class HomePageHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: Utils.size.height * 0.02),
-      height: Utils.size.height * .15,
+      padding: EdgeInsets.only(top: Constants.height * 0.02),
+      height: Constants.height * .15,
       width: double.infinity,
       color: Theme.of(context).primaryColor,
       child: Column(
@@ -32,7 +32,7 @@ class HomePageHeader extends StatelessWidget {
           ),
           onPressed: () => _scaffoledKey.currentState.openDrawer(),
         ),
-        SizedBox(width: Utils.size.width * 0.3),
+        SizedBox(width: Constants.width * 0.3),
         Text(
           'SSPIAN',
           style: TextStyle(

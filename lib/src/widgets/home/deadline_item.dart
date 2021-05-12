@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:random_color/random_color.dart';
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 
 class DeadlineItem extends StatelessWidget {
   final deadline;
@@ -11,12 +11,12 @@ class DeadlineItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: Utils.size.width * 0.6,
-      margin: EdgeInsets.only(right: Utils.size.width * 0.05),
+      width: Constants.width * 0.6,
+      margin: EdgeInsets.only(right: Constants.width * 0.05),
       padding: EdgeInsets.only(
         //top: Utils.size.height * 0.02,
-        left: Utils.size.width * 0.04,
-        right: Utils.size.width * 0.05,
+        left: Constants.width * 0.04,
+        right: Constants.width * 0.05,
       ),
       decoration: BoxDecoration(
         border: Border.all(color: Color(0xffc7ccd2)),
@@ -40,7 +40,7 @@ class DeadlineItem extends StatelessWidget {
     return Row(
       children: [
         _buildTimeLabel(),
-        SizedBox(width: Utils.size.width * 0.05),
+        SizedBox(width: Constants.width * 0.05),
         _buildSubjectLabel(),
       ],
     );
@@ -55,7 +55,7 @@ class DeadlineItem extends StatelessWidget {
           size: 14,
           color: Color(0xffa8b1b9),
         ),
-        SizedBox(width: Utils.size.width * 0.01),
+        SizedBox(width: Constants.width * 0.01),
         Text(
           DateFormat.jm().format(deadline['deadline']),
           style: TextStyle(
@@ -95,7 +95,7 @@ class DeadlineItem extends StatelessWidget {
 
   Widget _buildTitle() {
     return Padding(
-      padding: EdgeInsets.only(left: Utils.size.width * 0.004),
+      padding: EdgeInsets.only(left: Constants.width * 0.004),
       child: Text(
         deadline['title'],
         style: TextStyle(
@@ -118,15 +118,12 @@ class DeadlineItem extends StatelessWidget {
       children: [
         CircleAvatar(
           backgroundColor: _color,
-          radius: Utils.size.width * 0.01,
+          radius: Constants.width * 0.01,
         ),
-        SizedBox(width: Utils.size.width * 0.02),
+        SizedBox(width: Constants.width * 0.02),
         Text(
           deadline['type'].toString().toUpperCase(),
-          style: TextStyle(
-            color: Color(0xffa8b1b9),
-            fontSize: 12
-          ),
+          style: TextStyle(color: Color(0xffa8b1b9), fontSize: 12),
         ),
       ],
     );

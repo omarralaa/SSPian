@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 
 class FilterCard extends StatelessWidget {
   final Function selectIndex;
@@ -11,11 +11,11 @@ class FilterCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      top: Utils.size.height * 0.12,
-      right: -Utils.size.width * 0.05,
+      top: Constants.height * 0.09,
+      right: -Constants.width * 0.05,
       child: Container(
-        height: Utils.size.height * 0.06,
-        width: Utils.size.width,
+        height: Constants.height * 0.06,
+        width: Constants.width,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(
@@ -23,8 +23,8 @@ class FilterCard extends StatelessWidget {
           ),
         ),
         padding: EdgeInsets.only(
-          left: Utils.size.width * 0.03,
-          right: Utils.size.width * 0.08,
+          left: Constants.width * 0.03,
+          right: Constants.width * 0.08,
           //top: Utils.size.height * 0.02,
         ),
         child: ListView(
@@ -46,7 +46,7 @@ class FilterCard extends StatelessWidget {
     bool isSelected = index == selectedIndex;
     return TextButton(
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: Utils.size.width * 0.016),
+        padding: EdgeInsets.symmetric(horizontal: Constants.width * 0.016),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [

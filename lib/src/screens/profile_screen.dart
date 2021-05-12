@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:sspian/src/Widgets/upper_squares_home.dart';
 import 'package:sspian/src/providers/auth.dart';
 import 'package:sspian/src/providers/profile.dart' as p;
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 import 'package:sspian/src/widgets/profile/profile_button.dart';
 import 'package:sspian/src/widgets/profile/profile_header.dart';
 
@@ -45,7 +45,7 @@ class ProfileScreen extends StatelessWidget {
 
   Widget _buildButtonList() {
     return Padding(
-      padding: EdgeInsets.only(top: Utils.size.height * 0.02),
+      padding: EdgeInsets.only(top: Constants.height * 0.02),
       child: Column(
         children: [
           ProfileButton(text: 'Subscriptions', callback: _subscriptions),

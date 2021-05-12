@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:sspian/src/models/announcement.dart';
 import 'package:sspian/src/providers/announcement.dart';
 import 'package:sspian/src/providers/deadline.dart';
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 
 import 'announcement_item.dart';
 
@@ -28,8 +28,8 @@ class _AnnouncementsListState extends State<AnnouncementsList> {
 
     return Expanded(
       child: Container(
-        margin: EdgeInsets.symmetric(vertical: Utils.size.height * 0.04),
-        padding: EdgeInsets.symmetric(horizontal: Utils.size.width * 0.05),
+        margin: EdgeInsets.symmetric(vertical: Constants.height * 0.04),
+        padding: EdgeInsets.symmetric(horizontal: Constants.width * 0.05),
         child: PaginationView<Announcement>(
           preloadedItems: announcementList,
           itemBuilder: (ctx, announcement, index) {
@@ -60,7 +60,8 @@ class _AnnouncementsListState extends State<AnnouncementsList> {
     final announcemntsProvider = Provider.of<AnnouncementProvider>(context);
 
     setState(() {
-      announcementList = announcemntsProvider.getSpecificAnnouncement(widget.index);
+      announcementList =
+          announcemntsProvider.getSpecificAnnouncement(widget.index);
     });
 
     //return announcemntsProvider.announcements;

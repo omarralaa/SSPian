@@ -11,7 +11,7 @@ import 'package:sspian/src/screens/calendar_screen.dart';
 import 'package:sspian/src/screens/home_screen.dart';
 import 'package:sspian/src/screens/auth_screen.dart';
 import 'package:sspian/src/screens/splash_screen.dart';
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 
 import 'providers/auth.dart';
 
@@ -41,8 +41,8 @@ class App extends StatelessWidget {
           return MaterialApp(
             title: 'SSPIAN',
             theme: ThemeData(
-              primarySwatch: Utils.primaryColorSwatch,
-              accentColor: Color(0xff303842),
+              primarySwatch: Constants.primaryColorSwatch,
+              accentColor: Color(0xff553c51),
               scaffoldBackgroundColor: Color(0xffeaebed),
               visualDensity: VisualDensity.adaptivePlatformDensity,
               textTheme: GoogleFonts.latoTextTheme(

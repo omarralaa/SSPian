@@ -3,7 +3,7 @@ import 'dart:collection';
 import 'package:flutter/material.dart';
 import 'package:sspian/src/models/course.dart';
 import 'package:sspian/src/utils/factory_utils.dart';
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 import 'package:random_color/random_color.dart';
 
 class CourseItem extends StatelessWidget {
@@ -19,8 +19,8 @@ class CourseItem extends StatelessWidget {
     return InkWell(
       child: Container(
         margin: EdgeInsets.symmetric(
-            horizontal: Utils.size.width * 0.02,
-            vertical: Utils.size.height * 0.01),
+            horizontal: Constants.width * 0.02,
+            vertical: Constants.height * 0.01),
         decoration: BoxDecoration(
           color: _color,
           borderRadius: BorderRadius.all(
@@ -28,7 +28,7 @@ class CourseItem extends StatelessWidget {
           ),
         ),
         child: Container(
-          margin: EdgeInsets.only(bottom: Utils.size.height * 0.005),
+          margin: EdgeInsets.only(bottom: Constants.height * 0.005),
           decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.all(

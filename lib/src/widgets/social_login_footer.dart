@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_vector_icons/flutter_vector_icons.dart';
-import 'package:sspian/src/utils/utils.dart';
+import 'package:sspian/src/utils/constants.dart';
 
 class SocialLoginFooter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(bottom: Utils.size.height * .1),
+      padding: EdgeInsets.only(bottom: Constants.height * .1),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

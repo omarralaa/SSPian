@@ -1,17 +1,18 @@
 import 'package:flutter/foundation.dart';
 import 'package:sspian/src/models/deadline.dart';
 import 'package:sspian/src/models/deadline_type.dart';
-import 'package:sspian/src/services/api/deadline_service.dart';
+import 'package:sspian/src/repositories/deadline/deadline_repository.dart';
+import 'package:sspian/src/repositories/deadline/deadline_repository_interface.dart';
 
 class DeadlineProvider with ChangeNotifier {
   List<Deadline> _deadlines = [];
 
 
-  DeadlineService _deadlineService = DeadlineService();
+  IDeadlineRepository _deadlineRepository = DeadlineRepository();
 
   Future<void> getDeadlines() async {
     try {
-      _deadlines = await _deadlineService.getDeadlines({'sort': '-createdAt'});
+      _deadlines = await _deadlineRepository.getDeadlines({'sort': '-createdAt'});
       notifyListeners();
     } catch (err) {
       throw (err);
