@@ -31,6 +31,7 @@ class _AnnouncementsListState extends State<AnnouncementsList> {
         margin: EdgeInsets.symmetric(vertical: Constants.height * 0.04),
         padding: EdgeInsets.symmetric(horizontal: Constants.width * 0.05),
         child: PaginationView<Announcement>(
+
           preloadedItems: announcementList,
           itemBuilder: (ctx, announcement, index) {
             return AnnouncementItem(announcement);
@@ -52,6 +53,12 @@ class _AnnouncementsListState extends State<AnnouncementsList> {
             child: CircularProgressIndicator(),
           ),
         ),
+        // child: ListView.builder(
+        //   itemCount: announcementList.length,
+        //   itemBuilder: (ctx, index) {
+        //     return AnnouncementItem(announcementList[index]);
+        //   },
+        // ),
       ),
     );
   }
@@ -64,6 +71,5 @@ class _AnnouncementsListState extends State<AnnouncementsList> {
           announcemntsProvider.getSpecificAnnouncement(widget.index);
     });
 
-    //return announcemntsProvider.announcements;
   }
 }

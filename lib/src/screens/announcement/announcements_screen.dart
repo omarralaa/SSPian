@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:sspian/src/Widgets/anounncements/announcements_list.dart';
-import 'package:sspian/src/Widgets/anounncements/filter_card.dart';
-import 'package:sspian/src/widgets/anounncements/anounncements_page_header.dart';
+import 'package:sspian/src/screens/announcement/widgets/announcements_list.dart';
+import 'package:sspian/src/screens/announcement/widgets/anounncements_page_header.dart';
+import 'package:sspian/src/screens/announcement/widgets/filter_card.dart';
 
 
 class AnnouncementsScreen extends StatefulWidget {

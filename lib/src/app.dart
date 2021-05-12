@@ -6,10 +6,10 @@ import 'package:sspian/src/providers/announcement.dart';
 import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/deadline.dart';
 import 'package:sspian/src/providers/profile.dart';
-import 'package:sspian/src/screens/announcements_screen.dart';
+import 'package:sspian/src/screens/announcement/announcements_screen.dart';
 import 'package:sspian/src/screens/calendar_screen.dart';
-import 'package:sspian/src/screens/home_screen.dart';
-import 'package:sspian/src/screens/auth_screen.dart';
+import 'package:sspian/src/screens/home/home_screen.dart';
+import 'package:sspian/src/screens/auth/auth_screen.dart';
 import 'package:sspian/src/screens/splash_screen.dart';
 import 'package:sspian/src/utils/constants.dart';
 
@@ -61,6 +61,7 @@ class App extends StatelessWidget {
   }
 }
 
+// ! Fix Bug of the SplashScreen
 home(context, auth) {
   if (auth.isAuth) {
     Provider.of<ProfileProvider>(context, listen: false)

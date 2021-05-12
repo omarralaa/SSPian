@@ -4,12 +4,13 @@ import 'package:sspian/src/providers/announcement.dart';
 import 'package:sspian/src/providers/auth.dart';
 import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/deadline.dart';
-import 'package:sspian/src/widgets/home/home_menu_grid.dart';
+import 'package:sspian/src/screens/home/widgets/home_menu_grid.dart';
+import 'package:sspian/src/screens/home/widgets/home_page_header.dart';
+import 'package:sspian/src/screens/home/widgets/home_upper_container.dart';
+import 'package:sspian/src/screens/home/widgets/main_drawer.dart';
 
-import 'package:sspian/src/widgets/home/home_page_header.dart';
-import 'package:sspian/src/widgets/home/home_upper_container.dart';
-import 'package:sspian/src/widgets/home/main_drawer.dart';
-import 'package:sspian/src/widgets/home/summary_card.dart';
+
+import 'widgets/summary_card.dart';
 
 class HomeScreen extends StatefulWidget {
   @override

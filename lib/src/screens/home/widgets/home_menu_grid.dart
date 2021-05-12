@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sspian/src/screens/announcements_screen.dart';
+import 'package:sspian/src/screens/announcement/announcements_screen.dart';
 import 'package:sspian/src/screens/calendar_screen.dart';
+import 'package:sspian/src/screens/home/widgets/menu_item.dart';
 import 'package:sspian/src/utils/constants.dart';
-import 'package:sspian/src/widgets/home/menu_item.dart';
 
 class HomeMenuGrid extends StatelessWidget {
   @override

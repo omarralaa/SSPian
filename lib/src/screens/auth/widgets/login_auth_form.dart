@@ -5,7 +5,6 @@ import 'package:sspian/src/providers/profile.dart';
 
 import 'package:sspian/src/utils/constants.dart';
 import 'package:sspian/src/utils/validations.dart';
-import '../social_login_footer.dart';
 
 class LoginAuthForm extends StatefulWidget {
   @override

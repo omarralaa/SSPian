@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:sspian/src/screens/home/widgets/deadline_item.dart';
 
 import 'package:sspian/src/utils/constants.dart';
-import 'package:sspian/src/widgets/home/deadline_item.dart';
 
 class HomeUpperContainer extends StatelessWidget {
   @override

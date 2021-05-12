@@ -14,7 +14,7 @@ class AnnouncementProvider with ChangeNotifier {
   IAnnouncmentRepository _announcementRepository = AnnouncementRepository();
   IDeadlineRepository _deadlineRepository = DeadlineRepository();
 
-  int page = 1;
+  int page = 0;
   final int limit = 10;
 
   // Getters
@@ -61,6 +61,7 @@ class AnnouncementProvider with ChangeNotifier {
   }
 
   List<Announcement> getSpecificAnnouncement(int index) {
+    List<Announcement> announcements = [];
     switch (index) {
       case 0:
         return allAnnoumcements;

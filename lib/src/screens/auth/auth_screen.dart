@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:sspian/src/screens/auth/widgets/login_auth_form.dart';
+import 'package:sspian/src/screens/auth/widgets/register_auth_form.dart';
 
 import 'package:sspian/src/utils/constants.dart';
-import 'package:sspian/src/widgets/auth/login_auth_form.dart';
-import 'package:sspian/src/widgets/auth/register_auth_form.dart';
+
 import 'package:sspian/src/widgets/down_squares_background_widget.dart';
 import 'package:sspian/src/widgets/social_login_footer.dart';
 import 'package:sspian/src/widgets/upper_squares_background_widget.dart';
