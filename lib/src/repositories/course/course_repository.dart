@@ -35,4 +35,24 @@ class CourseRepository extends ICourseRepository {
       throw (err);
     }
   }
+
+  // @override
+  // Future<List<Course>> getEnrolledCourses() async {
+  //   try {
+  //     final response = await _httpClient.get(subUrl + '/enrolledrof', queryParameters: query);
+
+  //     final data = response.data['data'];
+  //     List<Course> courses = [];
+
+  //     for (var c in data) {
+  //       Course course = Course.fromJson(c);
+  //       courses.add(course);
+  //     }
+
+  //     //return compute();
+  //     return courses;
+  //   } catch (err) {
+  //     throw (err);
+  //   }
+  // }
 }

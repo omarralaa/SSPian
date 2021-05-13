@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pagination_view/pagination_view.dart';
 import 'package:provider/provider.dart';
 import 'package:sspian/src/models/announcement.dart';
-import 'package:sspian/src/providers/announcement.dart';
+import 'package:sspian/src/providers/update.dart';
 import 'package:sspian/src/providers/deadline.dart';
 import 'package:sspian/src/utils/constants.dart';
 
@@ -24,7 +24,7 @@ class _AnnouncementsListState extends State<AnnouncementsList> {
   Widget build(BuildContext context) {
     _setList();
 
-    final announcemntsProvider = Provider.of<AnnouncementProvider>(context);
+    final announcemntsProvider = Provider.of<UpdateProvider>(context);
 
     return Expanded(
       child: Container(
@@ -64,7 +64,7 @@ class _AnnouncementsListState extends State<AnnouncementsList> {
   }
 
   void _setList() {
-    final announcemntsProvider = Provider.of<AnnouncementProvider>(context);
+    final announcemntsProvider = Provider.of<UpdateProvider>(context);
 
     setState(() {
       announcementList =

@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 import 'package:random_color/random_color.dart';
+import 'package:sspian/src/models/deadline.dart';
+import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/utils/constants.dart';
 
 class DeadlineItem extends StatelessWidget {
-  final deadline;
+  final Deadline deadline;
 
   DeadlineItem(this.deadline);
 
@@ -26,22 +29,20 @@ class DeadlineItem extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          _buildHeader(),
-          //SizedBox(height: Utils.size.height * 0.02),
+          _buildHeader(context),
           _buildTitle(),
-          //SizedBox(height: Utils.size.height * 0.015),
           _buildType(),
         ],
       ),
     );
   }
 
-  Widget _buildHeader() {
+  Widget _buildHeader(context) {
     return Row(
       children: [
         _buildTimeLabel(),
         SizedBox(width: Constants.width * 0.05),
-        _buildSubjectLabel(),
+        _buildSubjectLabel(context),
       ],
     );
   }
@@ -57,7 +58,7 @@ class DeadlineItem extends StatelessWidget {
         ),
         SizedBox(width: Constants.width * 0.01),
         Text(
-          DateFormat.jm().format(deadline['deadline']),
+          DateFormat.jm().format(deadline.dueDate),
           style: TextStyle(
             fontSize: 13,
             color: Color(0xffa8b1b9),
@@ -67,7 +68,11 @@ class DeadlineItem extends StatelessWidget {
     );
   }
 
-  Widget _buildSubjectLabel() {
+  Widget _buildSubjectLabel(context) {
+    final course = Provider.of<CourseProvider>(context)
+        .getEnrolledCourse(deadline.courseId);
+
+    final courseName = course == null ? '' : course.name;
     return Expanded(
       child: Row(
         children: [
@@ -78,7 +83,7 @@ class DeadlineItem extends StatelessWidget {
           ),
           Expanded(
             child: Text(
-              deadline['courseName'],
+              courseName,
               maxLines: 1,
               overflow: TextOverflow.fade,
               softWrap: false,
@@ -97,7 +102,7 @@ class DeadlineItem extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(left: Constants.width * 0.004),
       child: Text(
-        deadline['title'],
+        deadline.title,
         style: TextStyle(
           fontSize: 15,
           color: Color(0xff1d2631),
@@ -122,7 +127,7 @@ class DeadlineItem extends StatelessWidget {
         ),
         SizedBox(width: Constants.width * 0.02),
         Text(
-          deadline['type'].toString().toUpperCase(),
+          deadline.deadlineType.toString().split('.').last.toUpperCase(),
           style: TextStyle(color: Color(0xffa8b1b9), fontSize: 12),
         ),
       ],

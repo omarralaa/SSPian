@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import 'package:sspian/src/providers/announcement.dart';
+import 'package:sspian/src/providers/update.dart';
 
 import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/deadline.dart';
@@ -29,8 +29,8 @@ class App extends StatelessWidget {
         ChangeNotifierProvider<CourseProvider>(
           create: (ctx) => CourseProvider(),
         ),
-        ChangeNotifierProvider<AnnouncementProvider>(
-          create: (ctx) => AnnouncementProvider(),
+        ChangeNotifierProvider<UpdateProvider>(
+          create: (ctx) => UpdateProvider(),
         ),
         ChangeNotifierProvider<DeadlineProvider>(
           create: (ctx) => DeadlineProvider(),

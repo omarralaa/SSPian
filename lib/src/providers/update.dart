@@ -2,14 +2,17 @@ import 'package:flutter/foundation.dart';
 import 'package:sspian/src/models/announcement.dart';
 import 'package:sspian/src/models/deadline.dart';
 import 'package:sspian/src/models/deadline_type.dart';
+import 'package:sspian/src/models/update.dart';
 import 'package:sspian/src/repositories/announcement/announcement_repository.dart';
 import 'package:sspian/src/repositories/announcement/announcement_repository_interface.dart';
 import 'package:sspian/src/repositories/deadline/deadline_repository.dart';
 import 'package:sspian/src/repositories/deadline/deadline_repository_interface.dart';
 
-class AnnouncementProvider with ChangeNotifier {
+class UpdateProvider with ChangeNotifier {
+  List<Update> _updates = [];
   List<Announcement> _announcements = [];
   List<Deadline> _deadlines = [];
+  List<Deadline> _upcommingDeadlines = [];
 
   IAnnouncmentRepository _announcementRepository = AnnouncementRepository();
   IDeadlineRepository _deadlineRepository = DeadlineRepository();
@@ -17,9 +20,17 @@ class AnnouncementProvider with ChangeNotifier {
   int page = 0;
   final int limit = 10;
 
+  var upcommingDeadlinesCount = {
+    'total': 0,
+    'quiz': 0,
+    'assignment': 0,
+    'project': 0,
+  };
+
   // Getters
   List<Announcement> get announcements => _announcements;
   List<Deadline> get deadlines => _deadlines;
+  List<Deadline> get upcommingDeadlines => _upcommingDeadlines;
 
   List<Deadline> get assignments {
     return _deadlines
@@ -39,32 +50,13 @@ class AnnouncementProvider with ChangeNotifier {
         .toList();
   }
 
-  List<Announcement> get allAnnoumcements {
-    List<Announcement> all = [];
+  List<Update> get updates => _updates;
 
-    int i = 0, j = 0;
-    while (i < announcements.length && j < deadlines.length) {
-      bool condition =
-          announcements[i].dateCreated.isAfter(deadlines[j].dateCreated);
-
-      if (condition) {
-        all.add(announcements[i++]);
-      } else {
-        all.add(deadlines[j++]);
-      }
-    }
-
-    while (i < announcements.length) all.add(announcements[i++]);
-    while (j < deadlines.length) all.add(deadlines[j++]);
-
-    return all;
-  }
-
-  List<Announcement> getSpecificAnnouncement(int index) {
-    List<Announcement> announcements = [];
+  List<Update> getSpecificAnnouncement(int index) {
+    List<Update> announcements = [];
     switch (index) {
       case 0:
-        return allAnnoumcements;
+        return updates;
         break;
       case 1:
         return deadlines;
@@ -85,7 +77,7 @@ class AnnouncementProvider with ChangeNotifier {
     notifyListeners();
   }
 
-  Future<void> getAnnouncements() async {
+  Future<void> getUpdates() async {
     try {
       final announcementResponse = await _announcementRepository
           .getAnnouncements(
@@ -104,6 +96,20 @@ class AnnouncementProvider with ChangeNotifier {
     try {
       _deadlines = await _deadlineRepository.getDeadlines(
           {'sort': '-createdAt', 'limit': limit.toString(), 'page': '1'});
+      notifyListeners();
+    } catch (err) {
+      throw (err);
+    }
+  }
+
+  Future<void> getRecentUpcommingDeadlines() async {
+    try {
+      final httpResponse = await _deadlineRepository.getUpcommingDeadlines();
+      _upcommingDeadlines = httpResponse.deadlines;
+      upcommingDeadlinesCount['total'] = httpResponse.total;
+      upcommingDeadlinesCount['quiz'] = httpResponse.quiz;
+      upcommingDeadlinesCount['project'] = httpResponse.project;
+      upcommingDeadlinesCount['assignment'] = httpResponse.assignment;
       notifyListeners();
     } catch (err) {
       throw (err);

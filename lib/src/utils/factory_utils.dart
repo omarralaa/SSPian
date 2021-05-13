@@ -31,9 +31,9 @@ class FactoryUtils {
     return Color(0xff53aae9);
   }
 
-  String getAnnouncementType(announcemnt) {
-    if (announcemnt is Deadline) {
-      switch (announcemnt.deadlineType) {
+  String getAnnouncementType(update) {
+    if (update is Deadline) {
+      switch (update.deadlineType) {
         case DeadLineType.quiz:
           return 'Quiz';
         case DeadLineType.assignment:

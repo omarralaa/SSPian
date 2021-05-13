@@ -5,7 +5,6 @@ import 'package:sspian/src/Widgets/courses/course_item.dart';
 
 import 'package:sspian/src/Widgets/upper_squares_home.dart';
 import 'package:sspian/src/providers/course.dart';
-import 'package:sspian/src/providers/profile.dart';
 import 'package:sspian/src/utils/constants.dart';
 
 class CoursesScreen extends StatefulWidget {
@@ -59,11 +58,12 @@ class _CoursesScreenState extends State<CoursesScreen> {
 
   Widget _buildBody() {
     final courses = Provider.of<CourseProvider>(context).courses;
-    final enrolledCourseIds = courses != null
-        ? Provider.of<ProfileProvider>(context)
-            .profile
-            .getEnrolledCourses(courses)
-        : null;
+    // final enrolledCourseIds = courses != null
+    //     ? Provider.of<ProfileProvider>(context)
+    //         .profile
+    //         .getEnrolledCourses(courses)
+    //     : null;
+    final enrolledCourseIds = [];
     return enrolledCourseIds == null
         ? Center(
             child: CircularProgressIndicator(

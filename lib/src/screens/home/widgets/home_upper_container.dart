@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
+import 'package:sspian/src/providers/update.dart';
 import 'package:sspian/src/screens/home/widgets/deadline_item.dart';
 
 import 'package:sspian/src/utils/constants.dart';
@@ -76,18 +78,18 @@ class HomeUpperContainer extends StatelessWidget {
       },
     ];
 
-    return dummy_deadlines == null
-        ? SizedBox()
-        : Container(
-            padding: EdgeInsets.only(top: Constants.height * 0.03),
-            height: Constants.height * 0.16,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 2,
-              itemBuilder: (ctx, i) {
-                return DeadlineItem(dummy_deadlines[i]);
-              },
-            ),
-          );
+    return Consumer<UpdateProvider>(builder: (context, update, _) {
+      return Container(
+        padding: EdgeInsets.only(top: Constants.height * 0.03),
+        height: Constants.height * 0.16,
+        child: ListView.builder(
+          scrollDirection: Axis.horizontal,
+          itemCount: update.upcommingDeadlines.length,
+          itemBuilder: (ctx, i) {
+            return DeadlineItem(update.upcommingDeadlines[i]);
+          },
+        ),
+      );
+    });
   }
 }

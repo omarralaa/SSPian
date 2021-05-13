@@ -1,8 +1,9 @@
 import 'package:sspian/src/models/announcement.dart';
 import 'package:sspian/src/models/deadline_type.dart';
+import 'package:sspian/src/models/update.dart';
 import 'package:sspian/src/utils/factory_utils.dart';
 
-class Deadline extends Announcement {
+class Deadline extends Update {
   final DateTime _dueDate;
   final DeadLineType _type;
 

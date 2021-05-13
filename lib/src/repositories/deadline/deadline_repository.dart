@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:sspian/src/models/deadline.dart';
 import 'package:sspian/src/models/http_exception.dart';
+import 'package:sspian/src/models/http_responses/upcomming_deadline_http_response.dart';
 import 'package:sspian/src/repositories/deadline/deadline_repository_interface.dart';
 import 'package:sspian/src/services/api/sspian_api_service.dart';
 
@@ -15,7 +16,7 @@ class DeadlineRepository extends IDeadlineRepository {
   }
 
   @override
-  Future<List<Deadline>> getDeadlines(Map<String, String> query) async {
+  Future<List<Deadline>> getDeadlines(Map<String, dynamic> query) async {
     try {
       final response = await _httpClient.get(subUrl, queryParameters: query);
 
@@ -28,6 +29,21 @@ class DeadlineRepository extends IDeadlineRepository {
       }
 
       return deadlines;
+    } on DioError catch (err) {
+      throw HttpException(err.response.data['error']);
+    } catch (err) {
+      throw (err);
+    }
+  }
+
+  @override
+  Future<UpcommingDeadlineHttpResponse> getUpcommingDeadlines() async {
+    try {
+      final response = await _httpClient.get(subUrl + '/upcomming');
+
+      final httpResponse =
+          UpcommingDeadlineHttpResponse.fromJson(response.data);
+      return httpResponse;
     } on DioError catch (err) {
       throw HttpException(err.response.data['error']);
     } catch (err) {
