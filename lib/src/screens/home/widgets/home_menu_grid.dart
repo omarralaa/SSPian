@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sspian/src/screens/announcement/announcements_screen.dart';
+import 'package:sspian/src/screens/announcement/updates_screen.dart';
 import 'package:sspian/src/screens/calendar_screen.dart';
 import 'package:sspian/src/screens/home/widgets/menu_item.dart';
 import 'package:sspian/src/utils/constants.dart';
@@ -15,9 +15,9 @@ class HomeMenuGrid extends StatelessWidget {
           crossAxisCount: 2,
           children: [
             MenuItem(
-              title: 'Announcments',
+              title: 'Updates',
               iconData: Icons.campaign,
-              routeName: AnnouncementsScreen.routeName,
+              routeName: UpdatesScreen.routeName,
               color: Color(Constants.colorPaletteArray[0]),
             ),
             MenuItem(

@@ -30,12 +30,12 @@ class FilterCard extends StatelessWidget {
         child: ListView(
           scrollDirection: Axis.horizontal,
           children: [
-            _buildFilterButton(0, 'All Announcements', () {}),
+            _buildFilterButton(0, 'All Updates', () {}),
             _buildFilterButton(1, 'Deadlines', () {}),
             _buildFilterButton(2, 'Assignments', () {}),
             _buildFilterButton(3, 'Projects', () {}),
             _buildFilterButton(4, 'Quizzes', () {}),
-            _buildFilterButton(5, 'Updates', () {}),
+            _buildFilterButton(5, 'Announcements', () {}),
           ],
         ),
       ),

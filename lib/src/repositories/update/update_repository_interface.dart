@@ -1,5 +1,5 @@
-import 'package:sspian/src/models/update.dart';
+import 'package:sspian/src/models/update_response.dart';
 
 abstract class IUpdateRepository {
-  Future<List<Update>> getUpdates(Map<String, dynamic> query);
+  Future<UpdateResponse> getUpdates(Map<String, dynamic> query);
 }

@@ -27,6 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
     if (!_isLoaded) {
       Provider.of<CourseProvider>(context, listen: false).getEnrolledCourses();
       Provider.of<UpdateProvider>(context, listen: false).getUpdates();
+      Provider.of<UpdateProvider>(context, listen: false).getAnnouncements();
       Provider.of<UpdateProvider>(context, listen: false).getDeadlines();
       Provider.of<UpdateProvider>(context, listen: false)
           .getRecentUpcommingDeadlines();

@@ -6,7 +6,7 @@ import 'package:sspian/src/providers/update.dart';
 import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/deadline.dart';
 import 'package:sspian/src/providers/profile.dart';
-import 'package:sspian/src/screens/announcement/announcements_screen.dart';
+import 'package:sspian/src/screens/announcement/updates_screen.dart';
 import 'package:sspian/src/screens/calendar_screen.dart';
 import 'package:sspian/src/screens/home/home_screen.dart';
 import 'package:sspian/src/screens/auth/auth_screen.dart';
@@ -51,7 +51,7 @@ class App extends StatelessWidget {
             ),
             home: home(context, auth),
             routes: {
-              AnnouncementsScreen.routeName: (ctx) => AnnouncementsScreen(),
+              UpdatesScreen.routeName: (ctx) => UpdatesScreen(),
               CalendarScreen.routeName: (ctx) => CalendarScreen()
             },
           );

@@ -1,5 +1,6 @@
-import 'package:sspian/src/models/AnounncementResponse.dart';
+import 'package:sspian/src/models/announcement.dart';
+import 'package:sspian/src/models/update_response.dart';
 
 abstract class IAnnouncmentRepository {
-  Future<AnnouncementResponse> getAnnouncements(Map<String, String> query);
+  Future<List<Announcement>> getAnnouncements(Map<String, String> query);
 }

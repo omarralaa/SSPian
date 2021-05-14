@@ -7,6 +7,8 @@ import 'package:sspian/src/repositories/announcement/announcement_repository.dar
 import 'package:sspian/src/repositories/announcement/announcement_repository_interface.dart';
 import 'package:sspian/src/repositories/deadline/deadline_repository.dart';
 import 'package:sspian/src/repositories/deadline/deadline_repository_interface.dart';
+import 'package:sspian/src/repositories/update/update_repository.dart';
+import 'package:sspian/src/repositories/update/update_repository_interface.dart';
 
 class UpdateProvider with ChangeNotifier {
   List<Update> _updates = [];
@@ -16,6 +18,7 @@ class UpdateProvider with ChangeNotifier {
 
   IAnnouncmentRepository _announcementRepository = AnnouncementRepository();
   IDeadlineRepository _deadlineRepository = DeadlineRepository();
+  IUpdateRepository _updateRepository = UpdateRepository();
 
   int page = 0;
   final int limit = 10;
@@ -31,6 +34,7 @@ class UpdateProvider with ChangeNotifier {
   List<Announcement> get announcements => _announcements;
   List<Deadline> get deadlines => _deadlines;
   List<Deadline> get upcommingDeadlines => _upcommingDeadlines;
+  List<Update> get updates => _updates;
 
   List<Deadline> get assignments {
     return _deadlines
@@ -50,10 +54,7 @@ class UpdateProvider with ChangeNotifier {
         .toList();
   }
 
-  List<Update> get updates => _updates;
-
-  List<Update> getSpecificAnnouncement(int index) {
-    List<Update> announcements = [];
+  List<Update> getSpecificDeadline(int index) {
     switch (index) {
       case 0:
         return updates;
@@ -79,12 +80,12 @@ class UpdateProvider with ChangeNotifier {
 
   Future<void> getUpdates() async {
     try {
-      final announcementResponse = await _announcementRepository
-          .getAnnouncements(
-              {'sort': '-createdAt', 'limit': limit.toString(), 'page': '1'});
+      final updateResponse = await _updateRepository.getUpdates(
+        {'sort': '-createdAt', 'limit': limit.toString(), 'page': '1'},
+      );
 
-      _announcements = announcementResponse.announcements;
-      page = announcementResponse.currentPage;
+      _updates = updateResponse.updates;
+      page = updateResponse.currentPage;
 
       notifyListeners();
     } catch (err) {
@@ -96,6 +97,17 @@ class UpdateProvider with ChangeNotifier {
     try {
       _deadlines = await _deadlineRepository.getDeadlines(
           {'sort': '-createdAt', 'limit': limit.toString(), 'page': '1'});
+      notifyListeners();
+    } catch (err) {
+      throw (err);
+    }
+  }
+
+  Future<void> getAnnouncements() async {
+    try {
+      _announcements = await _announcementRepository.getAnnouncements(
+          {'sort': '-createdAt', 'limit': limit.toString(), 'page': '1'});
+
       notifyListeners();
     } catch (err) {
       throw (err);
@@ -116,20 +128,19 @@ class UpdateProvider with ChangeNotifier {
     }
   }
 
-  Future<List<Announcement>> pageFetch(int offset) async {
+  Future<List<Update>> pageFetch(int offset) async {
     //page = (offset / limit).round() + 1;
     page++;
 
-    final nextAnnouncementsResponse = await _announcementRepository
-        .getAnnouncements({
+    final nextUpdatesResponse = await _updateRepository.getUpdates({
       'sort': '-createdAt',
       'limit': limit.toString(),
       'page': page.toString()
     });
 
-    return page + 1 == nextAnnouncementsResponse.totalPages
+    return page + 1 == nextUpdatesResponse.totalPages
         ? []
-        : nextAnnouncementsResponse.announcements;
+        : nextUpdatesResponse.updates;
     //return nextAnnouncements;
   }
 }

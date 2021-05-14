@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:sspian/src/screens/announcement/widgets/announcements_list.dart';
-import 'package:sspian/src/screens/announcement/widgets/anounncements_page_header.dart';
+
+import 'package:sspian/src/screens/announcement/widgets/updates_list.dart';
+import 'package:sspian/src/screens/announcement/widgets/updates_page_header.dart';
 import 'package:sspian/src/screens/announcement/widgets/filter_card.dart';
 
-
-class AnnouncementsScreen extends StatefulWidget {
+class UpdatesScreen extends StatefulWidget {
   static const String routeName = '/announcements';
 
   @override
-  _AnnouncementsScreenState createState() => _AnnouncementsScreenState();
+  _UpdatesScreenState createState() => _UpdatesScreenState();
 }
 
-class _AnnouncementsScreenState extends State<AnnouncementsScreen> {
+class _UpdatesScreenState extends State<UpdatesScreen> {
   int _selectedIndex = 0;
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +32,7 @@ class _AnnouncementsScreenState extends State<AnnouncementsScreen> {
         Column(
           children: [
             AnnouncementsPageHeader(),
-            AnnouncementsList(index: _selectedIndex),
+            UpdatesList(index: _selectedIndex),
           ],
         ),
         FilterCard(_selectedIndex, selectIndex),

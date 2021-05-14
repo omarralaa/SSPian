@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:sspian/src/models/announcement.dart';
+import 'package:sspian/src/models/update.dart';
 import 'package:sspian/src/utils/factory_utils.dart';
 import 'package:sspian/src/utils/constants.dart';
 
-class AnnouncementItem extends StatelessWidget {
-  final Announcement _announcement;
+class UpdateItem extends StatelessWidget {
+  final Update _update;
 
-  AnnouncementItem(this._announcement);
+  UpdateItem(this._update);
 
   final FactoryUtils _factoryUtils = FactoryUtils();
 
@@ -51,13 +51,13 @@ class AnnouncementItem extends StatelessWidget {
             vertical: Constants.height * 0.006,
           ),
           decoration: BoxDecoration(
-            color: _factoryUtils.getAnnouncementColor(_announcement),
+            color: _factoryUtils.getAnnouncementColor(_update),
             borderRadius: BorderRadius.all(
               Radius.circular(Constants.width * 0.018),
             ),
           ),
           child: Text(
-            _factoryUtils.getAnnouncementType(_announcement).toUpperCase(),
+            _factoryUtils.getAnnouncementType(_update).toUpperCase(),
             style: TextStyle(
               color: Colors.white,
               fontSize: 13,
@@ -74,7 +74,7 @@ class AnnouncementItem extends StatelessWidget {
 
   Widget _buildTitle(context) {
     return Text(
-      _announcement.body,
+      _update.body,
       maxLines: 2,
       softWrap: true,
       overflow: TextOverflow.ellipsis,
@@ -87,7 +87,7 @@ class AnnouncementItem extends StatelessWidget {
 
   Widget _buildTimeAgo() {
     return Text(
-      _announcement.dateCreated.toString(),
+      _update.dateCreated.toString(),
       style: TextStyle(
         color: Color(0xffbbbbbb),
         fontSize: 12,

@@ -28,9 +28,9 @@ class AnnouncementsPageHeader extends StatelessWidget {
           ),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        SizedBox(width: Constants.width * 0.24),
+        SizedBox(width: Constants.width * 0.31),
         Text(
-          'Announcements',
+          'Updates',
           style: TextStyle(
             color: Colors.white,
             fontSize: 16,
