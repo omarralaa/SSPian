@@ -2,7 +2,6 @@ import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 import 'package:sspian/src/models/update_response.dart';
 import 'package:sspian/src/models/http_exception.dart';
-import 'package:sspian/src/models/update.dart';
 import 'package:sspian/src/repositories/update/update_repository_interface.dart';
 import 'package:sspian/src/services/api/sspian_api_service.dart';
 

@@ -17,7 +17,6 @@ class DeadlineItem extends StatelessWidget {
       width: Constants.width * 0.6,
       margin: EdgeInsets.only(right: Constants.width * 0.05),
       padding: EdgeInsets.only(
-        //top: Utils.size.height * 0.02,
         left: Constants.width * 0.04,
         right: Constants.width * 0.05,
       ),
@@ -106,7 +105,6 @@ class DeadlineItem extends StatelessWidget {
         style: TextStyle(
           fontSize: 15,
           color: Color(0xff1d2631),
-          //fontWeight: FontWeight.w600,
         ),
       ),
     );

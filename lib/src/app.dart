@@ -7,7 +7,7 @@ import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/deadline.dart';
 import 'package:sspian/src/providers/profile.dart';
 import 'package:sspian/src/screens/announcement/updates_screen.dart';
-import 'package:sspian/src/screens/calendar_screen.dart';
+import 'package:sspian/src/screens/calendar/calendar_screen.dart';
 import 'package:sspian/src/screens/home/home_screen.dart';
 import 'package:sspian/src/screens/auth/auth_screen.dart';
 import 'package:sspian/src/screens/splash_screen.dart';

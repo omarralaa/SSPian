@@ -22,7 +22,7 @@ class SSPApiService {
         },
         onResponse: (response, handler) {
           print(
-              '${response.statusCode} ${response.statusMessage} ${response.data}');
+              '${response.statusCode} ${response.statusMessage}');
           return handler.next(response);
         },
       ),

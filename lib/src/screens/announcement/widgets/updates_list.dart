@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pagination_view/pagination_view.dart';
 import 'package:provider/provider.dart';
-import 'package:sspian/src/models/announcement.dart';
 import 'package:sspian/src/models/update.dart';
 import 'package:sspian/src/providers/update.dart';
-import 'package:sspian/src/providers/deadline.dart';
 import 'package:sspian/src/utils/constants.dart';
 
 import 'update_item.dart';

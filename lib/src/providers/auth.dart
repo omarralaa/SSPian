@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:get_it/get_it.dart';
-import 'package:sspian/src/models/AuthServiceModel.dart';
 
 import 'package:sspian/src/models/auth_response.dart';
 import 'package:sspian/src/models/profile.dart';

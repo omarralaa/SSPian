@@ -1,5 +1,3 @@
-import 'dart:collection';
-
 import 'package:flutter/material.dart';
 import 'package:sspian/src/models/course.dart';
 import 'package:sspian/src/utils/factory_utils.dart';

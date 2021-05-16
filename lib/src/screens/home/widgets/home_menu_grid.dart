@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sspian/src/screens/announcement/updates_screen.dart';
-import 'package:sspian/src/screens/calendar_screen.dart';
+import 'package:sspian/src/screens/calendar/calendar_screen.dart';
 import 'package:sspian/src/screens/home/widgets/menu_item.dart';
 import 'package:sspian/src/utils/constants.dart';
 

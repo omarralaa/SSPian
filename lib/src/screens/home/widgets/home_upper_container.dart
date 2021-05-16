@@ -54,30 +54,6 @@ class HomeUpperContainer extends StatelessWidget {
   }
 
   Widget _buildDeadlinesList() {
-    final dummy_deadlines = [
-      {
-        'id': 1,
-        'title': 'Sheet #5',
-        'deadline': DateTime.now(),
-        'courseName': 'Discrete Mathematics',
-        'type': 'Assignment'
-      },
-      {
-        'id': 2,
-        'title': 'Quiz #1',
-        'deadline': DateTime.now(),
-        'courseName': 'Discrete Mathematics',
-        'type': 'Quiz'
-      },
-      {
-        'id': 3,
-        'title': 'Project #2',
-        'deadline': DateTime.now(),
-        'courseName': 'Discrete Mathematics',
-        'type': 'Project'
-      },
-    ];
-
     return Consumer<UpdateProvider>(builder: (context, update, _) {
       return Container(
         padding: EdgeInsets.only(top: Constants.height * 0.03),
