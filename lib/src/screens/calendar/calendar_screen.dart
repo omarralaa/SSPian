@@ -1,18 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:sspian/src/models/deadline.dart';
 import 'package:sspian/src/models/deadline_data_source.dart';
 import 'package:sspian/src/providers/course.dart';
 import 'package:sspian/src/providers/update.dart';
+import 'package:sspian/src/screens/calendar/widgets/calendar_agenda.dart';
 import 'package:sspian/src/utils/constants.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-class CalendarScreen extends StatelessWidget {
+class CalendarScreen extends StatefulWidget {
   static const String routeName = '/calendar';
+
+  @override
+  _CalendarScreenState createState() => _CalendarScreenState();
+}
+
+class _CalendarScreenState extends State<CalendarScreen> {
+  List<Deadline> _appointments = <Deadline>[];
+  DateTime _selectedDate = DateTime.now();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Deadlines Calendar'),),
+      appBar: AppBar(
+        title: Text('Deadlines Calendar'),
+      ),
       backgroundColor: Colors.white,
       body: _buildBody(context),
     );
@@ -30,24 +42,38 @@ class CalendarScreen extends StatelessWidget {
         left: Constants.width * 0.03,
         right: Constants.width * 0.03,
         top: Constants.height * 0.02,
+        bottom: Constants.height * 0.02,
       ),
-      child: SfCalendar(
-        todayHighlightColor: Theme.of(context).primaryColor,
-        view: CalendarView.month,
-        dataSource: DeadlinesDataSource(upcommingDeadlines, getEnrolledCourse),
-        monthViewSettings: MonthViewSettings(
-          agendaStyle: AgendaStyle(
-            appointmentTextStyle: TextStyle(
-              fontSize: Constants.width * 0.03,
+      child: Column(
+        children: [
+          Container(
+            height: Constants.height * 0.58,
+            child: SfCalendar(
+              showNavigationArrow: true,
+              todayHighlightColor: Theme.of(context).primaryColor,
+              view: CalendarView.month,
+              dataSource:
+                  DeadlinesDataSource(upcommingDeadlines, getEnrolledCourse),
+              onTap: calendarTap,
+              monthViewSettings: MonthViewSettings(
+                appointmentDisplayCount: 3,
+                appointmentDisplayMode: MonthAppointmentDisplayMode.appointment,
+                showTrailingAndLeadingDates: true,
+              ),
             ),
           ),
-          showAgenda: true,
-          appointmentDisplayCount: 3,
-          appointmentDisplayMode: MonthAppointmentDisplayMode.appointment,
-          agendaItemHeight: Constants.height * 0.072,
-          showTrailingAndLeadingDates: true,
-        ),
+          Expanded(child: CalendarAgenda(_appointments, _selectedDate)),
+        ],
       ),
     );
+  }
+
+  void calendarTap(CalendarTapDetails details) {
+    if (details.targetElement == CalendarElement.calendarCell) {
+      setState(() {
+        _appointments = details.appointments.cast<Deadline>();
+        _selectedDate = details.date;
+      });
+    }
   }
 }

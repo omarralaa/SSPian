@@ -37,13 +37,26 @@ class FactoryUtils {
         case DeadLineType.quiz:
           return 'Quiz';
         case DeadLineType.assignment:
-          return 'assignment';
+          return 'Assignment';
         case DeadLineType.project:
           return 'Project';
       }
     }
 
     return 'Update';
+  }
+
+  IconData getIconByDeadlineType(DeadLineType deadLineType) {
+    switch (deadLineType) {
+      case DeadLineType.quiz:
+        return Icons.question_answer;
+      case DeadLineType.assignment:
+        return Icons.assignment;
+      case DeadLineType.project:
+        return Icons.group_work;
+      default:
+        return Icons.ac_unit;
+    }
   }
 
   static DeadLineType getDeadlineType(String type) {
