@@ -1,16 +1,34 @@
-# sspian
+# SSPIAN
 
-A new Flutter project.
+> "An investment in knowledge always pays the best interest."
 
-## Getting Started
+SSPian is an application that helps college students to keep up with their latest updates, deadlines and assignments.
 
-This project is a starting point for a Flutter application.
+## Stack
 
-A few resources to get you started if this is your first Flutter project:
+Mobile: Dart, Flutter
+Backend: NodeJS, ExpressJS, and MongoDB
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Description
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Annonucments and Deadlines
+
+SSPIan helps user to keep up with their deadline, as they get latest updates about their deadlines in the main screen.
+They can also view them in a calendar view that will provide a timeline for the things that they should do.
+
+(Notification System will be implemented in the future)
+
+#### Forum
+
+Forums allow students to ask question about their course. Students, TAs, and professors can answer them.
+
+## Screenshots
+
+<img src="https://i.imgur.com/ygpXZya.png" width="300" height="600">
+<img src="https://i.imgur.com/XBP8Bwj.png" width="300" height="600">
+<img src="https://i.imgur.com/PYkM2Wh.png" width="300" height="600">
+
+## About
+
+I'm Omar Alaa, 21 Software Engineering Student.
+I created this application to help students in my college to manage their deadlines and can have a professional way of commmunicating
