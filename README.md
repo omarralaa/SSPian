@@ -28,7 +28,8 @@ Forums allow students to ask question about their course. Students, TAs, and pro
 <img src="https://i.imgur.com/XBP8Bwj.png" width="300" height="600">
 <img src="https://i.imgur.com/PYkM2Wh.png" width="300" height="600">
 
-## About
+## About me
 
-I'm Omar Alaa, 21 Software Engineering Student.
-I created this application to help students in my college to manage their deadlines and can have a professional way of commmunicating
+I'm Omar Alaa, 22 Software Development Engineer.
+I created this application to help students in my college to manage their assignments and deadlines.
+Also it to achieve a better professional way of commmunication
