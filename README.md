@@ -4,6 +4,10 @@
 
 SSPian is an application that helps college students to keep up with their latest updates, deadlines and assignments.
 
+## SSPian API
+
+[SSPIan API](https://github.com/omaritocen/sspian-api) is a RESTful API service, that provides the required functionalties for the SSPian app.
+
 ## Stack
 
 Mobile: Dart, Flutter
